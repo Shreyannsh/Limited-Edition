@@ -11,12 +11,12 @@ import WishList from "./Pages/WishList";
 function App() {
   return (
     <div className="App">
-      <h1>shreyansh</h1>
-      <nav>
-        <NavLink to='/'>OutOfBox</NavLink>||
-        <NavLink to='/cart' >Cart</NavLink>||
-        <NavLink to='/wishList'>WishList</NavLink>||
-        <NavLink to='login'>Login</NavLink>||
+      <nav className='navBar'>
+        <NavLink className='nav-logo' to='/'>Limited Edition</NavLink>
+        <input className='searchBar' placeholder='Search here' type='text'/>
+        <NavLink className='cart' to='/cart' >Cart</NavLink>
+        <NavLink className='wishList' to='/wishList'>WishList</NavLink>
+        <NavLink className='login' to='login'>Login</NavLink>
       </nav>
     
       <Routes>
@@ -28,7 +28,7 @@ function App() {
         {/* <Route path='/' element={<h1>Hey folks!</h1>}/>
         <Route path='/Mockman' element={ <Mockman />} /> */}
       </Routes>
-      <Mockman />
+      {/* <Mockman /> */}
     </div>
   );
 }

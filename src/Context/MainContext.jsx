@@ -9,9 +9,7 @@ export default function UniqueProvider({children}){
     const fetchData = async() =>{
         
         try{
-            const response = await fetch("/api/products",{
-                method:'GET'
-            })
+            const response = await fetch("/api/products")
             // console.log(await response.json())
             const {products} =  await response.json()
            
@@ -19,7 +17,7 @@ export default function UniqueProvider({children}){
            localStorage.getItem('products')
            setItems(products)
         }catch(error){ 
-                    
+            console.log(error.message)        
         }
     };
 
