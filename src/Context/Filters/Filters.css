@@ -1,0 +1,24 @@
+.filters{
+    margin-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+    background-color: rgb(123, 118, 118);
+    border-radius: 3px;
+}
+
+.filters-category{
+    display: flex;
+    flex-direction: column;
+    
+}
+.filters-rating{
+    display: flex;
+    flex-direction: column;
+}
+
+.filters-sort{
+    display: flex;
+    flex-direction: column;
+}

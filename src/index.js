@@ -8,7 +8,7 @@ import { makeServer } from "./server";
 import {BrowserRouter as Router} from "react-router-dom";
 
 import App from "./App";
-import UniqueProvider from "./Context/MainContext";
+import UniqueProvider from "./Components/MainContext";
 
 // Call make Server
 makeServer();

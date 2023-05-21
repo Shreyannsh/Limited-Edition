@@ -1,0 +1,14 @@
+.ProductListPage{
+    display: flex;
+    flex-direction: row;
+    /* color:aqua; */
+    padding-top: 5rem;
+}
+
+.allProducts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 10rem;
+    grid-column-gap: 36px;
+    grid-row-gap: 36px;
+}

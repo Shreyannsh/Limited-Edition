@@ -106,3 +106,15 @@
   display: flex;
   color:azure;
 }
+
+footer{
+  display: flex;
+  padding: 0px;
+  justify-content: space-around;
+  background-color: rgb(87, 83, 83);
+  color: #000000;
+}
+
+footer p{
+  font-size: 10px;
+}
