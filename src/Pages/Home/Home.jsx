@@ -13,11 +13,19 @@ export default function Home(){
 
     return(
         <div className='home'>
-            <div className="about">
-                <p>If you are unique</p>
-                <p>Why to buy oddinary</p>
-                <p>Presenting LIMITED EDITION</p>
-                <p>Exclusively for you</p>
+            <div className="about" >
+                <div className="para-1">
+                    <p>If you are unique</p>
+                    <p>Why to buy oddinary</p>
+                    <p>Presenting <i>LIMITED EDITION</i></p>
+                    <p>Exclusively for you</p>
+                </div>
+                <div>
+                    <p className='para-2'>Make your own Collection</p>
+                </div>
+                <div>
+                    <p className="para-3">Handpicked best of the best unforgetable priceless unique products selected and arranged for your fantesies</p>
+                </div>
             </div>
             <div className="category">
                 <Link className="category-phones">Phones</Link>

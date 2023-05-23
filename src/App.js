@@ -9,12 +9,13 @@ import ProductList from "./Pages/Product List/ProductList";
 import WishList from "./Pages/WishList/WishList";
 
 
+
 function App() {
   return (
     <div className="App">
 
       <nav className='navBar'>
-        <NavLink className='nav-logo' to='/'>Limited Edition</NavLink>
+        <NavLink className='nav-logo' to='/'>LIMITED EDITION</NavLink>
         <input className='searchBar' placeholder='Search here' type='text'/>
         <NavLink className='cart' to='/cart' >Cart</NavLink>
         <NavLink className='wishList' to='/wishlist'>WishList</NavLink>
