@@ -3,12 +3,12 @@ import './Home.css'
 import { useContext } from "react";
 import {Link, Route, Routes} from 'react-router-dom'
 
-import { UniqueContext } from "../../Components/MainContext";
+import { mainContext } from '../../Contexts/MainContext';
 import ProductList from '../Product List/ProductList';
 
 export default function Home(){
 
-    const {items} = useContext(UniqueContext);
+    const {items} = useContext(mainContext);
 
 
     return(

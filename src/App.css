@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  position: relative;
+  
 }
 body{
   font-family: "Amazon Ember",Arial,sans-serif;
@@ -55,6 +57,7 @@ body{
 
 .navBar{
   position: fixed;
+  z-index: 2;
   top:0px;
   left: 0;
   right:0;
@@ -67,6 +70,7 @@ body{
   /* border-bottom-left-radius: 20px;
   border-bottom-right-radius: 10px; */
   box-shadow: 0px 5px 10px 5px rgb(0,0,0) ;
+  
 }
 
 .searchBar{
@@ -99,26 +103,61 @@ body{
   display: flex;
   /* margin-left: 20%; */
   color:azure;
+  font-size: 25px;
+  margin-right: 5px;
+  /* margin-top: 5px; */
+  text-decoration: none;
 
+}
+.explore{
+  display: flex;
+  /* margin-left: 20%; */
+  color:azure;
+  font-size: 20px;
+  margin-right: 55px;
+  /* margin-top: 5px; */
+  text-decoration: none;
+}
+.cart span{
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 1px;
 }
 
 .wishList{
   display: flex;
   color:azure;
+  font-size: 25px;
+  text-decoration: none;
 }
+
+.wishList span{
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 2px;
+  
+}
+
 .login{
   display: flex;
   color:azure;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 footer{
   display: flex;
+  align-self: flex-end;
+  position:fixed;
   padding: 0px;
   justify-content: space-around;
   background-color: rgb(87, 83, 83);
   color: #000000;
+  position: relative;
+
 }
 
 footer p{
   font-size: 10px;
+  
 }

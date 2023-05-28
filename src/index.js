@@ -3,13 +3,15 @@ import { createRoot } from "react-dom/client";
 
 
 import React from "react";
-import ReactDOM from "react-dom";
 import { makeServer } from "./server";
 import {BrowserRouter as Router} from "react-router-dom";
 
 import App from "./App";
-import UniqueProvider from "./Components/MainContext";
-
+import UniqueProvider from "./Contexts/MainContext";
+import CartProvider from "./Contexts/CartContext";
+import AuthProvider from "./Contexts/AuthContext";
+import WishListProvider from "./Contexts/WishListContext";
+import FilterProvider from "./Contexts/FilterContext";
 // Call make Server
 makeServer();
 
@@ -19,9 +21,17 @@ const root = createRoot(rootElement);
 root.render(
   <React.StrictMode>
     <Router>
+      <AuthProvider>
+      <WishListProvider>
+      <CartProvider>
+      <FilterProvider>
       <UniqueProvider>
       <App />
       </UniqueProvider>
+      </FilterProvider>
+      </CartProvider>
+      </WishListProvider>
+      </AuthProvider>
     </Router>
   </React.StrictMode>,
   

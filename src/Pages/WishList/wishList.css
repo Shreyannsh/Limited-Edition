@@ -1,5 +1,13 @@
+.wishListPage{
+    padding-top: 15rem;
+}
 
-.item{
+.wishListItemList{
+    margin-left: 15rem;
+    padding-bottom: 2rem;
+
+}
+.wishListItem{
     box-shadow: 0px 0px 10px 1px #9aa3a0;
     width: 17rem;
     height: 22rem;
@@ -9,63 +17,78 @@
     display: flex;
     flex-direction: column;
     position:static;
+    margin-bottom: 2rem;
 }
 
-.item img{
+.wishListItem img{
     display: flex;
     align-self:center;
     width: 12rem;
     height: 12rem;
     border-radius: 5px;
-   
 }
 
-.item p{
+.wishListItem p{
     text-align: left;
     padding-left: 10px;
     padding-top: -15px;
 }
 
-.brandName{
+.wishListBrandName{
     font-weight: 700;
     margin-bottom: 2px;
 }
 
-.productName{
-    
+.wishListProductName{
    margin-bottom: 2px;
     font-size: 15px;
 }
-.productPrice{
+
+.wishListProductPrice{
     font-weight: 600;
 }
-.item button{
-    margin: 0rem 2rem;
+
+.wishListButtonRemove{
+    margin: 0.5rem 2rem;
     padding: 0.5rem 0rem;
     border-radius: 5px;
     background-color:  rgb(216, 176, 31);
     font-weight: 600;
 }
 
-.item button:hover{
+.wishListButtonRemove:hover{
     background-color: black;
     color:  rgb(216, 176, 31);
     cursor: pointer;
 }
 
-.rating{
+.wishListRating{
     position: absolute;
     font-size: 1.05rem;
     margin-left: 13rem;
     margin-top: 12.5rem;
-    background-color: rgb(46, 131, 228);
+    background-color: rgb(41, 117, 205);
     border-radius: 20px;
     padding: 1px 5px;
-}
+} 
 
-.addToFav{
+.wishListAddToFav{
     position: absolute;
     font-size: 1.5rem;
     margin-left: 15rem;
     cursor: pointer;
 }
+
+button{
+        margin: 0rem 2rem;
+        padding: 0.5rem 0rem;
+        border-radius: 5px;
+        background-color:  rgb(216, 176, 31);
+        font-weight: 600;
+    }
+
+    button:hover{
+        background-color: black;
+        color:  rgb(216, 176, 31);
+        cursor: pointer;
+    }

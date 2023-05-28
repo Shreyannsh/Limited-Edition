@@ -1,0 +1,125 @@
+.cartPage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: static;
+}
+
+.cartItemList{
+
+    margin-left: 15rem;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+
+}
+
+.cartItem{
+    box-shadow: 0px 0px 10px 1px #9aa3a0;
+    width: 17rem;
+    height: 22rem;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    position:static;
+    margin-bottom: 2rem;
+}
+
+.cartItem img{
+    display: flex;
+    align-self:center;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 5px;
+}
+
+.cartItem p{
+    text-align: left;
+    padding-left: 10px;
+    padding-top: -15px;
+}
+
+.cartBrandName{
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.cartProductName{
+   margin-bottom: 2px;
+    font-size: 15px;
+}
+
+.cartProductPrice{
+    font-weight: 600;
+}
+
+.cartButtonRemove{
+    margin: 0.5rem 2rem;
+    padding: 0.5rem 0rem;
+    border-radius: 5px;
+    background-color:  rgb(216, 176, 31);
+    font-weight: 600;
+}
+.cartButtonDecrement{
+    position:absolute;
+   /* padding-right: 7px; */
+    margin-left: 15rem;
+    margin-top: 17.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+.cartButtonIncrement{
+    position:absolute;
+    margin-top:17.5rem;
+    margin-left: 12.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0px 4px;
+}
+
+.quantity-heading{
+    position: absolute;
+    margin-top: 17.5rem;
+    margin-left: 9rem;
+    font-size: 13px;
+}
+.quantity{
+    position: absolute;
+    margin-top: 17.5rem;
+    margin-left: 14rem;
+    font-size: 13px;
+}
+
+.cartButtonRemove:hover{
+    background-color: black;
+    color:  rgb(216, 176, 31);
+    cursor: pointer;
+}
+
+.cartRating{
+    position: absolute;
+    font-size: 1.05rem;
+    margin-left: 13rem;
+    margin-top: 12.5rem;
+    background-color: rgb(41, 117, 205);
+    border-radius: 20px;
+    padding: 1px 5px;
+} 
+
+.cartAddToFav{
+    position: absolute;
+    font-size: 1.5rem;
+    margin-left: 15rem;
+    cursor: pointer;
+}
+
+.priceDetails{
+    position:fixed;
+    right: 30rem;
+    top: 20rem;
+    background-color: antiquewhite;
+    height: 25rem;
+    width: 30rem;
+}

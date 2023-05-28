@@ -1,6 +1,8 @@
 import "./App.css";
 import Mockman from 'mockman-js'
 import {NavLink,Routes,Route} from 'react-router-dom'
+import { FaShoppingCart,FaHeart,} from "react-icons/fa";
+
 
 import Cart from "./Pages/Cart/Cart";
 import Home from "./Pages/Home/Home";
@@ -17,8 +19,9 @@ function App() {
       <nav className='navBar'>
         <NavLink className='nav-logo' to='/'>LIMITED EDITION</NavLink>
         <input className='searchBar' placeholder='Search here' type='text'/>
-        <NavLink className='cart' to='/cart' >Cart</NavLink>
-        <NavLink className='wishList' to='/wishlist'>WishList</NavLink>
+        <NavLink to='/productList'className='explore'>Explore</NavLink>
+        <NavLink className='cart' to='/cart' ><FaShoppingCart/> <span>Cart</span></NavLink>
+        <NavLink className='wishList' to='/wishlist'><FaHeart/> <span>Wishlist</span></NavLink>
         <NavLink className='login' to='/login'>Login</NavLink>
       </nav> 
     
@@ -29,7 +32,6 @@ function App() {
         <Route path='/productList' element={<ProductList/>} /> 
         <Route path='/login' element={<Login/>} />
       </Routes>
-      {/* <Mockman />  */}
 
      <footer>
       <div className='footer-connect'>

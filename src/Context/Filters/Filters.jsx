@@ -1,6 +1,11 @@
+import { useContext } from 'react';
 import './Filters.css';
+import { filterContext } from '../../Contexts/FilterContext';
 
 export default function Filters(){
+
+    const {filterByCategory,categoriesName} = useContext(filterContext)
+    // console.log(categoriesName)
     return(
         <div className='filters'>
             <h3>Filters</h3> 
@@ -11,12 +16,15 @@ export default function Filters(){
             </div>
 
             <div  className="filters-category">
-           <p>Category</p>
-           <label><input type='checkbox' name='category' />Laptop</label> 
-           <label><input type='checkbox' name='category' />Phone</label> 
-           <label><input type='checkbox' name='category' />Watches</label> 
-           <label><input type='checkbox' name='category' />Earbuds</label> 
-           <label><input type='checkbox' name='category' />Gadgets</label> 
+           {/* <p>Category</p> */}
+           
+        {categoriesName.map(item => <label><input onClick={(e)=>filterByCategory(e)} type = "checkbox" value ={item._id}/>{item.categoryName}</label>)}
+
+           {/* <label ><input  value='laptops' type='checkbox' name='category' />Laptop</label> 
+           <label><input onClick={(e)=>filterByCategory(e)} value='phones' type='checkbox' name='category' />Phone</label> 
+           <label ><input onClick={(e)=>filterByCategory(e)} value='watches'  type='checkbox' name='category' />Watches</label> 
+           <label ><input  onClick={(e)=>filterByCategory(e)} value='earbuds' type='checkbox' name='category' />Earbuds</label> 
+           <label ><input onClick={(e)=>filterByCategory(e)} value='gadgets' type='checkbox' name='category' />Gadgets</label>  */}
            </div>
 
            <div  className="filters-rating"> 
