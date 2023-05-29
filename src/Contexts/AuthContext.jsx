@@ -14,17 +14,17 @@ export default function AuthProvider({children}){
             }
             const response = await axios.post('/api/auth/login',credintials)
 
-            // //console.log(response)
+            // ////console.log(response)
             const encodedToken = response.data.encodedToken
 
-            //console.log(encodedToken)
+            ////console.log(encodedToken)
 
             localStorage.setItem('encodedToken',encodedToken)
 
             
 
         }catch(error){
-            //console.log(error)
+            ////console.log(error)
         }
     }
    
@@ -39,12 +39,12 @@ export default function AuthProvider({children}){
             try{
 
             const response = await axios.post('/api/auth/signup',cred)    
-            //console.log(response)
-            //console.log(response.data.encodedToken)
+            ////console.log(response)
+            ////console.log(response.data.encodedToken)
           
     
             }catch(error){
-                //console.log(error.message)
+                ////console.log(error.message)
             }
     }
     

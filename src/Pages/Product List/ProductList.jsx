@@ -15,7 +15,7 @@ export default function ProductList(){
      const {state} = useContext(filterContext);
      const {allProductList} = useContext(mainContext)
      
-    //console.log(state.productList);
+    ////console.log(state.productList);
 
     return(
         <div className='ProductListPage'>

@@ -17,19 +17,19 @@ export default function CartProvider({children}){
                 headers: {authorization: localStorage.getItem('encodedToken')}
             })
 
-            // //console.log(await response.json())
+            // ////console.log(await response.json())
              const {cart} =  await response.json();
             // localStorage.setItem('cart',cart)
             // localStorage.getItem('cart')
-            //console.log(cart)
+            ////console.log(cart)
             dispatch({type:'get', payload: cart})
-            // //console.log(cart,'hey')
+            // ////console.log(cart,'hey')
             // setCart(cart)
             // setCart(response)
-            // //console.log(cart)
-            // //console.log(response,'cart')
+            // ////console.log(cart)
+            // ////console.log(response,'cart')
         }catch(error){
-            //console.log(error)
+            ////console.log(error)
         }
     }
 
@@ -42,7 +42,7 @@ export default function CartProvider({children}){
                  body: JSON.stringify({product:item})
 
             })
-            // //console.log(await response.json())
+            // ////console.log(await response.json())
             const {cart} = await response.json();
             localStorage.setItem('cart',cart)
             localStorage.getItem(cart)
@@ -57,7 +57,7 @@ export default function CartProvider({children}){
 
     const deleteFromCart = async(id) =>{
         try{
-            //console.log(id);
+            ////console.log(id);
             const response = await fetch(`/api/user/cart/${id}`,{
                 method:'DELETE',
                 headers: {authorization: localStorage.getItem('encodedToken')},
@@ -84,7 +84,7 @@ export default function CartProvider({children}){
             })
             const {cart} = await response.json();
             dispatch({type:'increment', payload: cart});
-            //console.log(cart.qty)
+            ////console.log(cart.qty)
         }catch(error){
             console.error(error)
         }
@@ -101,7 +101,7 @@ export default function CartProvider({children}){
             })
             const {cart} = await response.json();
             dispatch({type:'decrement', payload: cart});
-            //console.log(cart)
+            ////console.log(cart)
         }catch(error){
             console.error(error)
         }
@@ -118,7 +118,7 @@ export default function CartProvider({children}){
     },[]);
 
     const totalCartCount = state?.initialCart?.reduce((acc,crr)=>{
-        //console.log({acc,crr})
+        ////console.log({acc,crr})
         acc.quantity = acc.quantity + crr.qty;
        
         acc.totalAmount = acc.totalAmount + (Number(crr.price)* crr.qty);
@@ -126,9 +126,9 @@ export default function CartProvider({children}){
     },
     {quantity:0,totalAmount:0}
     )
-    //console.log(state?.initialCart)
-     //console.log(totalCartCount)
-    // //console.log(state)
+    ////console.log(state?.initialCart)
+     ////console.log(totalCartCount)
+    // ////console.log(state)
     return(
         <div>
             <cartContext.Provider value={{state,dispatch,addToCart,deleteFromCart, incrementQuantity,decrementQuantity,totalCartCount}}>

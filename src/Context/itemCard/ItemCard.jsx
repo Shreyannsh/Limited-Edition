@@ -16,8 +16,8 @@ export default function ItemCard({item}){
     //     const findItem = state.initialCart.find(({_id}) => _id === item._id )
     //     return findItem? true : false;
     // }
-    // //console.log(IsPresentInCart(item))
-    //  //console.log(state.initialCart.includes(item));
+    // ////console.log(IsPresentInCart(item))
+    //  ////console.log(state.initialCart.includes(item));
 
     return(
         <div className='item'>

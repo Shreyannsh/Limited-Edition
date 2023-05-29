@@ -12,7 +12,7 @@ export default function UniqueProvider({children}){
             const {products} =  await response.json();
             setAllProductList(products);
         }catch(error){ 
-            //console.log(error.message)        
+            ////console.log(error.message)        
         }
     };
 

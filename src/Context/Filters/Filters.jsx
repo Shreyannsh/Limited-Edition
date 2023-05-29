@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import './Filters.css';
 import { filterContext } from '../../Contexts/FilterContext';
+import { categories } from '../../backend/db/categories';
 
 export default function Filters(){
 
-    const {filterByCategory,categoriesName} = useContext(filterContext)
-    // console.log(categoriesName)
+    const {filterByCategory,categoriesName} = useContext(filterContext);
+    // console.log(categories)
+    // //console.log(categoriesName)
     return(
         <div className='filters'>
             <h3>Filters</h3> 
@@ -18,7 +20,7 @@ export default function Filters(){
             <div  className="filters-category">
            {/* <p>Category</p> */}
            
-        {categoriesName.map(item => <label><input onClick={(e)=>filterByCategory(e)} type = "checkbox" value ={item._id}/>{item.categoryName}</label>)}
+        {categoriesName.map(item => <label><input onChange={filterByCategory} type = "checkbox" value ={item._id}/>{item.categoryName}</label>)}
 
            {/* <label ><input  value='laptops' type='checkbox' name='category' />Laptop</label> 
            <label><input onClick={(e)=>filterByCategory(e)} value='phones' type='checkbox' name='category' />Phone</label> 
