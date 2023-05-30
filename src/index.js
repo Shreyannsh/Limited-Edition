@@ -24,11 +24,11 @@ root.render(
       <AuthProvider>
       <WishListProvider>
       <CartProvider>
-      <FilterProvider>
       <UniqueProvider>
+      <FilterProvider>
       <App />
-      </UniqueProvider>
       </FilterProvider>
+      </UniqueProvider>
       </CartProvider>
       </WishListProvider>
       </AuthProvider>

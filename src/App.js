@@ -3,22 +3,26 @@ import Mockman from 'mockman-js'
 import {NavLink,Routes,Route} from 'react-router-dom'
 import { FaShoppingCart,FaHeart,} from "react-icons/fa";
 
-
 import Cart from "./Pages/Cart/Cart";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import ProductList from "./Pages/Product List/ProductList";
 import WishList from "./Pages/WishList/WishList";
+import { useContext } from "react";
+import { filterContext } from "./Contexts/FilterContext";
 
 
 
 function App() {
+
+  const {searchedText,productSearch} = useContext(filterContext);
+
   return (
     <div className="App">
 
       <nav className='navBar'>
         <NavLink className='nav-logo' to='/'>LIMITED EDITION</NavLink>
-        <input className='searchBar' placeholder='Search here' type='text'/>
+        <input onChange={(e) =>productSearch(e)} className='searchBar' placeholder='Search here' value={searchedText} type='text'/>
         <NavLink to='/productList'className='explore'>Explore</NavLink>
         <NavLink className='cart' to='/cart' ><FaShoppingCart/> <span>Cart</span></NavLink>
         <NavLink className='wishList' to='/wishlist'><FaHeart/> <span>Wishlist</span></NavLink>

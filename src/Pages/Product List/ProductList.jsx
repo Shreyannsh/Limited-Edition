@@ -12,10 +12,13 @@ import ItemCard from '../../Context/itemCard/ItemCard';
 
 export default function ProductList(){
     // const {state,dispatch} = useContext(cartContext);       
-     const {state} = useContext(filterContext);
+     const {state, displayProducts} = useContext(filterContext);
      const {allProductList} = useContext(mainContext)
      
     ////console.log(state.productList);
+    const products =displayProducts()
+
+    // console.log(products)
 
     return(
         <div className='ProductListPage'>
@@ -25,17 +28,18 @@ export default function ProductList(){
         <div>
         <h1>Showing all products</h1>
         <div className='allProducts'>
-            {(state?.productList?.length>0 ? state?.productList : allProductList)?.map((item)=>(
+            {products.map((item) => <ItemCard item={item} />)}
+            {/* {(state?.productList?.length>0 ? state?.productList : allProductList)?.map((item)=>(
                 <ItemCard item={item} />
             //     <div className='item'>
-            //     <span><FaRegHeart/> </span>
+     m       //     <span><FaRegHeart/> </span>
             //     <img src={item.image} alt=''/>
             //     <p>{item.name} </p>
             //     <p>Brand: {item.brand}</p>
             //     <p>Price: {item.price}</p>
             //     <button onClick={()=>dispatch({type:'add',product: {item}})}>{state.initialCart.includes(item)?( <Link to='/cart'>Go to Cart</Link>) :('Add to Cart')}</button>
             // </div>
-            ))}
+            ))} */}
         </div>
             </div>
         </div>
