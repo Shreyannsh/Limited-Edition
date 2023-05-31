@@ -3,6 +3,7 @@ import Mockman from 'mockman-js'
 import {NavLink,Routes,Route} from 'react-router-dom'
 import { FaShoppingCart,FaHeart,} from "react-icons/fa";
 
+import Signup from "./Pages/Login/Signup/Signup";
 import Cart from "./Pages/Cart/Cart";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
@@ -35,6 +36,7 @@ function App() {
         <Route path='/wishlist' element={<WishList/>} />
         <Route path='/productList' element={<ProductList/>} /> 
         <Route path='/login' element={<Login/>} />
+        <Route path='/signup' element={<Signup/>} />
       </Routes>
 
      <footer>

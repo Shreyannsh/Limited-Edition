@@ -7,8 +7,6 @@ import ProductList from "../Pages/Product List/ProductList";
 
 export const filterContext = createContext();
 
-
-
 export default function FilterProvider({children}){
 
     const {allProductList} = useContext(mainContext)

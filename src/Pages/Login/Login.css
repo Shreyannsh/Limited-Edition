@@ -1,0 +1,97 @@
+.parentDiv{
+    margin: 10rem 5rem;
+    }
+
+.loginPage{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 28.5rem;
+    background-color: rgb(178, 174, 174);
+    font-size: larger;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);;
+}
+
+.headingEmailAddress {
+    text-align: left;
+    padding-left: 5rem;
+}
+
+.headingPassword{
+    text-align: left;
+    padding-left: 5rem;
+    margin-top: 2.5rem;
+}
+
+.inputBoxEmailAddress{
+    height: 2rem;
+    margin: -15px 5rem;
+    border-radius: 5px;
+    font-size: large;
+    padding-left: 5px;
+}
+
+.inputBoxPassword{
+    height: 2rem;
+    margin: -15px 5rem;
+    border-radius: 5px;
+    font-size: larger;
+    padding-left: 5px;
+}
+
+.rememberMe{
+   font-size: 2rem;
+}
+
+.elements{
+    margin-top:12px;
+    font-size: smaller;
+    color: rgb(44, 106, 240);
+    cursor: pointer;
+ }
+
+ .elements span:hover{
+    text-decoration: underline;
+ }
+
+ .elements label{
+    padding-right: 25px;
+    color: rgb(0, 0, 0);
+    cursor: default;
+    text-decoration: none;
+ }
+
+ .elements input{
+    cursor: pointer;
+ }
+
+.buttonLogin{
+    height: 2.5rem;
+    margin: 12px 5rem;
+    border-radius: 2px;
+}
+
+.createNewAccount{
+    margin-bottom: 12px;
+    padding-top: 12px;
+    padding-right: 10px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.createNewAccount::after {
+    content: ">";
+    position: absolute;
+    padding-left: 15px;
+    margin-top: -6px;
+    font-size: 2rem;
+  }
+
+  .createNewAccount:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+

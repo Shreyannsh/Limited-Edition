@@ -21,8 +21,6 @@ export default function AuthProvider({children}){
 
             localStorage.setItem('encodedToken',encodedToken)
 
-            
-
         }catch(error){
             ////console.log(error)
         }
