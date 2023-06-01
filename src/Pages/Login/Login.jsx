@@ -6,19 +6,21 @@ import { authContext } from "../../Contexts/AuthContext";
 
 export default function Login(){
 
-    const {login,signUp} = useContext(authContext)
+    const {dispatch,login,logInError,guestLogin} = useContext(authContext)
     return(
         <div className='parentDiv' style={{}}>
         <div className= 'loginPage' >
-            <h1>Login</h1>
+            <h1>Login</h1> <span onClick ={guestLogin}className='guest'>Guest Login</span>
             <p className='headingEmailAddress'>Email address</p>
-            <input className='inputBoxEmailAddress' placeholder='shreyanshtiwari@gmail.com' type='text' />
+            <input onChange={(e) =>dispatch({type:'loginEmail',payload: e})}className='inputBoxEmailAddress' placeholder='shreyanshtiwari@gmail.com' type='email' />
             <p className='headingPassword' >Password</p>
-            <input className='inputBoxPassword' placeholder='**************' type='password' /><br/>
+            <input onChange={(e) =>dispatch({type:'loginPassword',payload: e})} className='inputBoxPassword' placeholder='**************' type='password' /><br/>
           
             <p className='elements'>  <label>  <input className='rememberMe' type='checkbox' /> Remember me</label> <span> Forgot your Password? </span></p>
-            <button className='buttonLogin' >Login</button>
+            <span className='loginError'>{logInError}</span>
+            <button className='buttonLogin' onClick={login} >Login</button>
             <Link className='createNewAccount' to='/signup'> Create New Account </Link> 
+            
         </div>
         </div>
       
