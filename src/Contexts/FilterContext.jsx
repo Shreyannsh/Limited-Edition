@@ -37,9 +37,9 @@ export default function FilterProvider({children}){
     //         const response = await fetch('/api/categories',{
     //             method:'GET'
     //         })
-    //         // //console.log(await response.json());
+    //         // ////////console.log(await response.json());
     //         const {categories} =  await response.json();
-    //          //console.log(categories);
+    //          ////////console.log(categories);
             
     //         setCategoriesName(categories);
     //     }catch(error){
@@ -49,14 +49,14 @@ export default function FilterProvider({children}){
 
     // const categoryData = async(categoryId) =>{
     //     try{
-    //         //console.log(categoryId)
+    //         ////////console.log(categoryId)
     //         const response = await fetch(`/api/categories/${categoryId}`,{
     //             method:'GET'
     //         })
-    //          ////console.log(await response.json());
+    //          //////////console.log(await response.json());
     //         const {category: {productList}} = await response.json();
-    //         // //console.log(category)
-    //          //console.log(productList);
+    //         // ////////console.log(category)
+    //          ////////console.log(productList);
     //          setFilteredProducts([...filteredProducts,...productList])
              
     //     }catch(error){
@@ -66,7 +66,7 @@ export default function FilterProvider({children}){
 
     // const filterByCategory =(event)=>{
     //     const  checked = event.target.checked;
-    //     // console.log(checked);
+    //     // //////console.log(checked);
     //     const  value = event.target.value;
         
     //     if(checked){
@@ -77,14 +77,14 @@ export default function FilterProvider({children}){
     //        setFilteredProducts([]);
     //        const filtered =  category.filter((cat) => cat !== value);
     //        setCategory(filtered);
-    //        console.log(filtered,'filtered array');
-    //        console.log(filteredProducts);
+    //        //////console.log(filtered,'filtered array');
+    //        //////console.log(filteredProducts);
     //        filtered.map((catId) => categoryData(catId));
     //        dispatch({type:'addCategory', payload: filteredProducts});
     //     }
-    //     // console.log(category,'array of ids');
-    //     // console.log(categoriesName);
-    //     //console.log(filteredProducts)
+    //     // //////console.log(category,'array of ids');
+    //     // //////console.log(categoriesName);
+    //     ////////console.log(filteredProducts)
     // }
 
     // useEffect(() =>{
@@ -120,14 +120,14 @@ export default function FilterProvider({children}){
         products=[];
         const items = state.checkBoxValues.map((cbValue) => 
         allProductList.filter((item) => item.categoryName === cbValue));
-         console.log(items)
+         //////console.log(items)
         items.map((array) =>{
         products = [...products,...array]
        })
      }
 
      if(rating.length>0){
-        console.log('124')
+        //////console.log('124')
         products = products.filter((item) => Number(item.rating) >= Number(rating));
       }
 
@@ -136,9 +136,9 @@ export default function FilterProvider({children}){
      }
 
      if(price>500){
-      console.log(price)
+      //////console.log(price)
       products = products.filter((item) => Number(item.price) >= Number(price));
-      console.log(products)
+      //////console.log(products)
      }
 
      if(sort.length>0){
@@ -160,8 +160,8 @@ export default function FilterProvider({children}){
         // }
     }
 
-    // console.log(state.checkBoxValues);
-    console.log(rating)
+    // //////console.log(state.checkBoxValues);
+    //////console.log(rating)
      
 
     return(

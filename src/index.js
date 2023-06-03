@@ -12,6 +12,7 @@ import CartProvider from "./Contexts/CartContext";
 import AuthProvider from "./Contexts/AuthContext";
 import WishListProvider from "./Contexts/WishListContext";
 import FilterProvider from "./Contexts/FilterContext";
+import AddressProvider from "./Contexts/AddressContext";
 // Call make Server
 makeServer();
 
@@ -22,6 +23,7 @@ root.render(
   <React.StrictMode>
     <Router>
       <AuthProvider>
+      <AddressProvider>
       <WishListProvider>
       <CartProvider>
       <UniqueProvider>
@@ -31,6 +33,7 @@ root.render(
       </UniqueProvider>
       </CartProvider>
       </WishListProvider>
+      </AddressProvider>
       </AuthProvider>
     </Router>
   </React.StrictMode>,

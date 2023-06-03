@@ -1,6 +1,9 @@
 import { createContext, useState, useReducer } from "react";
 import axios from 'axios';
 import { authReducer } from "../Reducer/authReducer";
+import { useNavigate,useLocation } from "react-router-dom";
+import Login from "../Pages/Login/Login";
+
 export const authContext = createContext();
  
 export default function AuthProvider({children}){
@@ -17,8 +20,13 @@ export default function AuthProvider({children}){
 
     const [state,dispatch] = useReducer(authReducer,initializer)
 
+    const navigate = useNavigate();
+    const location = useLocation();
+
     const [logInError,setLogInError] = useState('')
     const [signupError,setSignupError] = useState('')
+
+    const [isLoggedIn,setIsLoggedIn] = useState(false)
 
   
     const login = async() =>{
@@ -28,35 +36,47 @@ export default function AuthProvider({children}){
                 password: state.loginPassword
                
             }
-            const response = await axios.post('/api/auth/login',credintials)
+            const response = await axios.post('/api/auth/login',credintials);
 
             const encodedToken = response.data.encodedToken;
 
-            localStorage.setItem('encodedToken',encodedToken)
-            setLogInError('')
+            localStorage.setItem('encodedToken',encodedToken);
+            setLogInError('');
+            setIsLoggedIn(true);
+            let from = location.state?.from?.pathname || '/';
+            navigate(from);
         }catch(error){
-            console.log(error)
-            setLogInError(error.message)
+            //////console.log(error);
+            setLogInError(error.message);
         }
     }
 
-    const guestLogin = async() =>{
-        try{
-            const credintials = {
-                email:"adarshbalika@gmail.com",
-                password: "adarshbalika" 
-            }
+    // const guestLogin = async() =>{
+    //     try{
+    //         const credintials = {
+    //             email:"adarshbalika@gmail.com",
+    //             password: "adarshbalika" 
+    //         };
 
-            const response = await axios.post('/api/auth/login',credintials)
+    //         const response = await axios.post('/api/auth/login',credintials);
 
-            const encodedToken = response.data.encodedToken;
+    //         const encodedToken = response.data.encodedToken;
 
-            localStorage.setItem('encodedToken',encodedToken)
-            setLogInError('')
-        }catch(error){
-            console.log(error)
-            setLogInError(error.message)
-        }
+    //         localStorage.setItem('encodedToken',encodedToken);
+    //         setLogInError('');
+    //         setIsLoggedIn(true);
+    //         let from = location.state?.from?.pathname || '/';
+    //         navigate(from);
+    //     }catch(error){
+    //         //////console.log(error);
+    //         setLogInError(error.message);
+    //     }
+    // }
+
+    const guestLogin = () =>{
+        //////console.log('hey')
+        dispatch({type:'guestLogin'})
+        login();
     }
 
     const signUp = async() =>{
@@ -67,38 +87,40 @@ export default function AuthProvider({children}){
             lastName: state.lastName
         }
         try{
-            const response = await axios.post('/api/auth/signup',cred)    
+            const response = await axios.post('/api/auth/signup',cred)   ;
+            let from = location.state?.from?.pathname || '/';
+            navigate(from)
     
         }catch(error){
-                console.log(error.message)
+                //////console.log(error.message);
             }
     }
 
     const signUpDetails = () =>{
         
         if(!state.firstName || !state.lastName || !state.signupEmail || !state.signupPassword || !state.signupRePassword ){
-            alert('filling all fields are mandatory')
+            return   alert('filling all fields are mandatory')
         
         }
 
         if (state.signupPassword !== state.signupRePassword ){
-            alert('Passwords do not match')
+           return  alert('Passwords do not match')
         }
 
         if(state.signupRePassword.length<8){
-            alert('Password must be minimum 8 character long')
+           return  alert('Password must be minimum 8 character long')
         }
 
         signUp()
     }
 
-    console.log( signupError);
 
-
+    //////console.log(isLoggedIn)
+    // //////console.log( state);
 
     return(
         <div >
-          <authContext.Provider value={{login,signUpDetails,dispatch,logInError,guestLogin, signupError}}>
+          <authContext.Provider value={{login,signUpDetails,dispatch,logInError,guestLogin,isLoggedIn,state,setIsLoggedIn}}>
           {children}
           </authContext.Provider>
         </div>

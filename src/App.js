@@ -11,12 +11,16 @@ import ProductList from "./Pages/Product List/ProductList";
 import WishList from "./Pages/WishList/WishList";
 import { useContext } from "react";
 import { filterContext } from "./Contexts/FilterContext";
+import { authContext } from "./Contexts/AuthContext";
+import Profile from "./Pages/Profile/Profile";
+import RequiresAuth from "./Context/RequiresAuth/RequiresAuth";
 
 
 
 function App() {
 
   const {searchedText,productSearch} = useContext(filterContext);
+  const {isLoggedIn} = useContext(authContext);
 
   return (
     <div className="App">
@@ -27,16 +31,17 @@ function App() {
         <NavLink to='/productList'className='explore'>Explore</NavLink>
         <NavLink className='cart' to='/cart' ><FaShoppingCart/> <span>Cart</span></NavLink>
         <NavLink className='wishList' to='/wishlist'><FaHeart/> <span>Wishlist</span></NavLink>
-        <NavLink className='login' to='/login'>Login</NavLink>
+        <NavLink className='login' to={isLoggedIn ? '/profile' :'/login'}>{isLoggedIn?'Profile':'Login'}</NavLink>
       </nav> 
     
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/cart' element={<Cart/>} />
-        <Route path='/wishlist' element={<WishList/>} />
+        <Route path='/cart' element={<RequiresAuth><Cart/></RequiresAuth>} />
+        <Route path='/wishlist' element={<RequiresAuth><WishList/></RequiresAuth>} />
         <Route path='/productList' element={<ProductList/>} /> 
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
+        <Route path='/profile' element={<Profile/>} />
       </Routes>
 
      <footer>

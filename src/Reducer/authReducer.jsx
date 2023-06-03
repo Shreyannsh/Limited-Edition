@@ -21,5 +21,10 @@ export const authReducer = (state,action) => {
         case 'signupRePassword':{
             return {...state,signupRePassword:action.payload.target.value}
         }
+
+        case 'guestLogin':{
+            //////console.log('hey')
+            return {...state,loginEmail:"adarshbalika@gmail.com", loginPassword:"adarshbalika"}
+        }
     }
 } 

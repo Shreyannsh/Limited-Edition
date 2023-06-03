@@ -15,10 +15,7 @@ export default function ProductList(){
      const {state, displayProducts} = useContext(filterContext);
      const {allProductList} = useContext(mainContext)
      
-    ////console.log(state.productList);
     const products =displayProducts()
-
-    // console.log(products)
 
     return(
         <div className='ProductListPage'>
@@ -28,11 +25,13 @@ export default function ProductList(){
         <div>
         <h1>Showing all products</h1>
         <div className='allProducts'>
-            {products.map((item) => <ItemCard item={item} />)}
+            {products.map((item) =><li key={item._id} style={{textDecoration:'none'}}>
+                <ItemCard item={item} />
+            </li> )}
             {/* {(state?.productList?.length>0 ? state?.productList : allProductList)?.map((item)=>(
                 <ItemCard item={item} />
             //     <div className='item'>
-     m       //     <span><FaRegHeart/> </span>
+            //     <span><FaRegHeart/> </span>
             //     <img src={item.image} alt=''/>
             //     <p>{item.name} </p>
             //     <p>Brand: {item.brand}</p>

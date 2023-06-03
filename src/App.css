@@ -148,12 +148,12 @@ body{
 footer{
   display: flex;
   align-self: flex-end;
-  position:fixed;
+  /* position:fixed; */
   padding: 0px;
   justify-content: space-around;
   background-color: rgb(87, 83, 83);
   color: #000000;
-  position: relative;
+  /* position: relative; */
 
 }
 

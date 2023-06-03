@@ -1,5 +1,5 @@
 export const cartReducer =(state,action) =>{
-    ////console.log(action.type,action.payload)
+    //////////console.log(action.type,action.payload)
     switch(action.type){
 
         case 'get':{
@@ -12,7 +12,7 @@ export const cartReducer =(state,action) =>{
 
         case 'delete':
          {
-           ////console.log(action)
+           //////////console.log(action)
             return {...state, initialCart: action.payload};
          }
          

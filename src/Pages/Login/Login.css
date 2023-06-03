@@ -1,5 +1,8 @@
 .parentDiv{
     margin: 10rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
 
 .loginPage{
