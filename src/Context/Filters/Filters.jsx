@@ -6,8 +6,8 @@ import { categories } from '../../backend/db/categories';
 export default function Filters(){
 
     const {filterByPrice,dispatch,ratingFilter,sortFilter} = useContext(filterContext);
-    // //////console.log(categories)
-    // ////////console.log(categoriesName)
+    // ////// (categories)
+    // //////// (categoriesName)
     return(
         <div className='filters'>
             <h3>Filters</h3> 

@@ -18,7 +18,7 @@ export default function WishListProvider({children}){
                 method:'GET',
                 headers: {authorization:  localStorage.getItem('encodedToken')}
             })
-            //////////console.log(await response.json());
+            ////////// (await response.json());
             const {wishlist} = await response.json();
             localStorage.setItem('whishList', wishlist)
             localStorage.getItem('wishList')
@@ -35,9 +35,9 @@ export default function WishListProvider({children}){
                 headers: {authorization:  localStorage.getItem('encodedToken')},
                 body:JSON.stringify({product: item})
             })
-            // //////////console.log(await response.json());
+            // ////////// (await response.json());
             const {wishlist} = await response.json();
-            //////////console.log(wishlist);
+            ////////// (wishlist);
             localStorage.setItem('wishList', wishlist)
             localStorage.getItem('wishList')
             dispatch({type:'add',payload:wishlist})
@@ -49,13 +49,13 @@ export default function WishListProvider({children}){
     const deleteFromWishList = async(id) =>{
         
         try{
-            //////////console.log(id);
+            ////////// (id);
             const response = await fetch(`/api/user/wishlist/${id}`,{
                 method:'DELETE',
                 headers: {authorization: localStorage.getItem('encodedToken')},
             })
            
-            // //////////console.log(await response.json());
+            // ////////// (await response.json());
             const {wishlist} = await response.json();
             localStorage.setItem('whishList', wishlist)
             localStorage.getItem('wishList')

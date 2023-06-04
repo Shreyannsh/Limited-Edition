@@ -46,7 +46,7 @@ export default function AuthProvider({children}){
             let from = location.state?.from?.pathname || '/';
             navigate(from);
         }catch(error){
-            //////console.log(error);
+            ////// (error);
             setLogInError(error.message);
         }
     }
@@ -68,13 +68,13 @@ export default function AuthProvider({children}){
     //         let from = location.state?.from?.pathname || '/';
     //         navigate(from);
     //     }catch(error){
-    //         //////console.log(error);
+    //         ////// (error);
     //         setLogInError(error.message);
     //     }
     // }
 
     const guestLogin = () =>{
-        //////console.log('hey')
+        ////// ('hey')
         dispatch({type:'guestLogin'})
         login();
     }
@@ -92,7 +92,7 @@ export default function AuthProvider({children}){
             navigate(from)
     
         }catch(error){
-                //////console.log(error.message);
+                ////// (error.message);
             }
     }
 
@@ -115,8 +115,8 @@ export default function AuthProvider({children}){
     }
 
 
-    //////console.log(isLoggedIn)
-    // //////console.log( state);
+    ////// (isLoggedIn)
+    // ////// ( state);
 
     return(
         <div >

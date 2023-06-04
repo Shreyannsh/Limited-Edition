@@ -1,4 +1,6 @@
 import { useContext } from "react"
+import { NavLink } from "react-router-dom";
+
 import { cartContext } from "../../Contexts/CartContext"
 
 import './Cart.css'
@@ -37,7 +39,7 @@ export default function Cart(){
                 <p>Discount: </p>
                 <p>Delivery Charges</p>
                 <p>Total Amount</p>
-                <button>Checkout</button>
+                <button><NavLink to='/checkout'>Checkout</NavLink></button>
             </div>
             </div>
         </div>

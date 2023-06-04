@@ -5,32 +5,29 @@ import { cartContext } from '../../Contexts/CartContext';
 import { Link } from 'react-router-dom';
 import { wishListContext } from '../../Contexts/WishListContext';
 
-
-
 export default function ItemCard({item}){
 
     const {state,addToCart} = useContext(cartContext);
     const {addToWishList} = useContext(wishListContext);
 
-    console.log(state)
-
     const IsPresentInCart = (item) =>{
-        const findItem = state?.initialCart.find(({_id}) => _id === item._id)
-        console.log(findItem);
+        const findItem = state?.initialCart?.find(({_id}) => _id === item._id)
         return findItem ? true : false;
     }
 
-    return(
+    return (
+
         <div className='item'>
             <span onClick={()=>addToWishList(item)} className='addToFav'><FaHeart style={{color:'grey'}}/> </span>
             <img src={item.image} alt=''/>
             <span className='rating'>{item.rating} <FaStar style={{color:' rgb(255, 251, 0)'}}/></span>
             <p className='brandName'>{item.brand}</p>
             <p className='productName'>{item.name} </p>
-            <p className='productPrice'> <span>&#x20B9;</span>{item.price}</p>
+            <p className='productPrice'> <span>&#x20B9;</span> {item.price}</p>
             {/* <button onClick={()=>addToCart(item)}>Add to Cart</button> */}
             
             {IsPresentInCart(item)? <button> <Link to='/cart'>Go to Cart</Link></button>  :  <button onClick={()=>addToCart(item)}>Add to Cart</button>}
         </div>
+
     )
 }

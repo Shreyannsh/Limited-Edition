@@ -1,0 +1,103 @@
+.parectBlock{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+}
+
+.allOtherBlock{
+    padding-top: 4rem;
+}
+.individualProduct h3{
+    text-align: left;
+    padding-left: 10px;
+}
+.individualProduct{
+    margin-top: 5rem;
+    box-shadow: 0px 0px 10px 1px #9aa3a0;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    position:static;
+}
+
+.individualProduct img{
+    display: flex;
+    align-self:center;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 5px;
+}
+
+.individualProduct p{
+    text-align: left;
+    padding-left: 10px;
+    padding-top: -15px;
+}
+
+.individualProduct .brandName{
+    margin-left: 2rem;
+    margin-bottom: 2px;
+    font-size: 15px;
+    font-size: larger;
+}
+
+.individualProduct .productName{
+    margin-left: 2rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: large;
+  
+}
+.individualProduct .productPrice{
+    font-weight: 600;
+    margin-left: 2rem;
+    font-size: larger;
+}
+.individualProduct button{
+    margin: 0rem 2rem;
+    padding: 0.5rem 0rem;
+    border-radius: 5px;
+    background-color:  rgb(216, 176, 31);
+    font-weight: 600;
+}
+
+.individualProduct button:hover{
+    background-color: black;
+    color:  rgb(216, 176, 31);
+    cursor: pointer;
+}
+
+.individualProduct .rating{
+    position: absolute;
+    font-size: 20px;
+    margin-left: -14.5rem;
+    margin-top: -1.5rem;
+    border-radius: 20px;
+    padding: 1px 5px;
+}
+
+.individualProduct .addToFav{
+    position: absolute;
+    font-size: 1.2rem;
+    margin-left: 3rem;
+    margin-top: -1rem;
+    cursor: pointer;
+}
+
+.individualProduct .addToFavHeart{
+    position: absolute;
+    font-size: 1.5rem;
+    margin-left: 11.5rem;
+    margin-top: -17px;
+    cursor: pointer;
+}
+
+.individualProduct .wishlist-btn{
+    background-color: red;
+}
+

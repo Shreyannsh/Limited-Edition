@@ -16,7 +16,7 @@ export default function Home(){
             <div className="about" >
                 <div className="para-1">
                     <p>If you are unique</p>
-                    <p>Why to buy oddinary</p>
+                    <p>Why to buy anything</p>
                     <p>Presenting <i>LIMITED EDITION</i></p>
                     <p>Exclusively for you</p>
                 </div>

@@ -5,6 +5,7 @@ import { mainContext } from '../../Contexts/MainContext';
 import { filterContext } from '../../Contexts/FilterContext';
 import Filters from "../../Context/Filters/Filters";
 import ItemCard from '../../Context/itemCard/ItemCard';
+import { NavLink } from 'react-router-dom';
 
 // import { FaRegHeart} from "react-icons/fa";
 // import { cartContext } from '../../Contexts/CartContext';
@@ -26,7 +27,7 @@ export default function ProductList(){
         <h1>Showing all products</h1>
         <div className='allProducts'>
             {products.map((item) =><li key={item._id} style={{textDecoration:'none'}}>
-                <ItemCard item={item} />
+              <NavLink to={`/individualPage/${item._id}`} > <ItemCard item={item} /></NavLink> 
             </li> )}
             {/* {(state?.productList?.length>0 ? state?.productList : allProductList)?.map((item)=>(
                 <ItemCard item={item} />

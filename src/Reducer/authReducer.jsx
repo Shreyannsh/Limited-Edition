@@ -23,7 +23,7 @@ export const authReducer = (state,action) => {
         }
 
         case 'guestLogin':{
-            //////console.log('hey')
+            ////// ('hey')
             return {...state,loginEmail:"adarshbalika@gmail.com", loginPassword:"adarshbalika"}
         }
     }

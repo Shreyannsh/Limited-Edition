@@ -1,0 +1,37 @@
+.checkoutPage{
+    padding:8rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addresses{
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
+    padding-left: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+}
+
+.change-btn{
+    margin-top: 15px;
+   
+   
+}
+
+.change-btn button{
+    padding: 7px 10px;
+}
+
+.orderDetails{
+    border: 1px solid;
+    
+}
+
+.addressesSection{
+    display: flex;
+    flex-direction: column;
+}

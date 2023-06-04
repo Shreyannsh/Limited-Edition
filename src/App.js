@@ -14,6 +14,8 @@ import { filterContext } from "./Contexts/FilterContext";
 import { authContext } from "./Contexts/AuthContext";
 import Profile from "./Pages/Profile/Profile";
 import RequiresAuth from "./Context/RequiresAuth/RequiresAuth";
+import Checkout from "./Pages/Cart/Checkout/Checkout";
+import IndividualPage from "./Pages/IndividualPage/IndividualPage";
 
 
 
@@ -42,6 +44,8 @@ function App() {
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
         <Route path='/profile' element={<Profile/>} />
+        <Route path='/checkout' element ={<Checkout />} />
+        <Route path='/individualPage/:productId' element={<IndividualPage/>} />
       </Routes>
 
      <footer>

@@ -9,7 +9,7 @@ export default function AddressProvider({children}){
 
     const initializer = {
         _id : '1',
-        name:'Shreyannsh',
+        name:'Shreyannsh Tiwari',
         houseNumber: 'L 143 Leo Homes',
         city:'New Delhi',
         state:'Delhi',
@@ -19,6 +19,8 @@ export default function AddressProvider({children}){
     };
 
     const [addressList,setAddressList] = useState([]);
+
+    const [selectedAddress_Id, setSelectedAddress_Id] = useState('')
 
     const [addState,dispatch] = useReducer(addressReducer,initializer);
 
@@ -40,6 +42,14 @@ export default function AddressProvider({children}){
        
     };
 
+    // const selectedAddress_Id = (e) =>{
+    //      //console.log(e)
+    //     const value = e.target.value;
+    //      //console.log(value)
+    //     return value;
+    // }
+
+
     const removeAddress =(address) =>{
         setAddressList(addressList.filter((add) => add !== address ))
     }
@@ -50,7 +60,7 @@ export default function AddressProvider({children}){
     
     return(
         <div>
-            <addressContext.Provider value={{addState,dispatch,addAddress, removeAddress, addressList}}>
+            <addressContext.Provider value={{addState,dispatch,addAddress, removeAddress, addressList,selectedAddress_Id,setSelectedAddress_Id}}>
             {children}
             </addressContext.Provider>
         </div>

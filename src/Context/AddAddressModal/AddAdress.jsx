@@ -6,18 +6,7 @@ import { addressContext } from "../../Contexts/AddressContext";
 
 export const AddAddress = (props) =>{
 
-
     const {addAddress,dispatch,addState,} = useContext(addressContext);
-
-    const [address,setAddress] = useState({
-        name:'',
-        houseNumber:'',
-        city:'',
-        state:'',
-        country:'',
-        pincode:'',
-        contactNumber:''
-    })
 
     if(!props.show){
         return null;
@@ -27,11 +16,7 @@ export const AddAddress = (props) =>{
         if(props.mode==='update'){
             addAddress("update");
         }else{
-         
-            // dispatch({type:'addAddress', payload: address});
             addAddress("add");
-          
-            ////console.log('aferAdd')
         }
     }
    
