@@ -25,7 +25,10 @@ export const cartReducer =(state,action) =>{
             {
                 return {...state, initialCart: action.payload};
              }
-
+        case 'clearCart':
+            {
+                return {...state, initialCart: []};
+             }
         default:
          return state;
     }

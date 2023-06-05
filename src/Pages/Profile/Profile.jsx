@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 import { authContext } from "../../Contexts/AuthContext";
 import  {AddressListFunction}  from "../../Context/AddressListFolder/AddressListFunction";
+import { cartContext} from "../../Contexts/CartContext";
+import { wishListContext } from "../../Contexts/WishListContext";
 
 
 export default function Profile(){
@@ -10,12 +12,16 @@ export default function Profile(){
     const navigate = useNavigate();
     const {setIsLoggedIn} = useContext(authContext);
     const {state} = useContext(authContext);
+    const {dispatch} = useContext(wishListContext);
+    // const {dispatch} = useContext(wishListContext);
 
     const logout = () =>{
-
+        dispatch({type:'clearWishList'})
         navigate('/');
         setIsLoggedIn(false);
-        localStorage.removeItem('encodedToken')
+       
+        localStorage.removeItem('encodedToken');
+
     }
 
     return(

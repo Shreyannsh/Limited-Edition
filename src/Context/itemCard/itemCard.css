@@ -20,6 +20,11 @@
    
 }
 
+.img{
+    display: flex;
+    align-self:center;
+}
+
 .item p{
     text-align: left;
     padding-left: 10px;

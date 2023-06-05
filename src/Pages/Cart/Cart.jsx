@@ -34,12 +34,12 @@ export default function Cart(){
             )}
             </div>
             <div className="priceDetails">
-                <h2>PRICE DETAILS</h2>
-                <p>Price({totalCartCount.quantity}) </p> <span>&#x20B9; {totalCartCount.totalAmount}</span><span> </span>
-                <p>Discount: </p>
-                <p>Delivery Charges</p>
-                <p>Total Amount</p>
-                <button><NavLink to='/checkout'>Checkout</NavLink></button>
+                <h2>PRICE DETAILS</h2> 
+                <p>Price({totalCartCount?.quantity}) <span>&#x20B9;{totalCartCount?.totalAmount}</span></p> 
+                <p>Discount: <span>&#x20B9;0</span></p>
+                <p>Delivery Charges <span>&#x20B9;{state.initialCart.length>0?250:'0'}</span></p>
+                <p style={{fontSize:'20px'}}><b>Total Amount </b>  <b><span>&#x20B9;{state.initialCart.length ? totalCartCount?.totalAmount+250 : 0}</span> </b> </p>
+                <NavLink className='checkoutLink' to='/checkout'>Checkout</NavLink>
             </div>
             </div>
         </div>

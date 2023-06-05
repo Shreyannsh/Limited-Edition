@@ -9,6 +9,10 @@ export const WishListReducer = (state,action) =>{
         case 'delete':{
             return {...state,wishListItems: action.payload};
         }
+        case 'clearWishList':
+            {
+                return {...state, wishListItems: []};
+             }
         default:
             return state;
     }

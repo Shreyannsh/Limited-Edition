@@ -27,7 +27,7 @@ export default function Filters(){
 
             <div  className="filters-category">
            
-        {/* {categoriesName.map(item => <label><input onChange={filterByCategory} type = "checkbox" value ={item._id}/>{item.categoryName}</label>)} */}
+            {/* {categoriesName.map(item => <label><input onChange={filterByCategory} type = "checkbox" value ={item._id}/>{item.categoryName}</label>)} */}
 
            <label ><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})}  value='laptop' type='checkbox' name='category' checked={state.checkBoxValues.includes('laptop')} />Laptop</label> 
            <label><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='phones' type='checkbox' name='category' checked={state.checkBoxValues.includes('phones')} />Phone</label> 

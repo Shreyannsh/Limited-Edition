@@ -69,6 +69,8 @@ export default function WishListProvider({children}){
         getWishList();
     },[]);
 
+    console.log(state.wishListItems)
+
     return(
         <div>
             <wishListContext.Provider value={{state,dispatch,addToWishList,deleteFromWishList}}>

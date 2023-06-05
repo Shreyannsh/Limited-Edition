@@ -6,9 +6,10 @@
 }
 
 .allProducts{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     margin-left: 5rem;
     grid-column-gap: 36px;
     grid-row-gap: 36px;
+    flex-wrap: wrap;
 }

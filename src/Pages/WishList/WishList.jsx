@@ -13,7 +13,7 @@ export default function WishList(){
             {state?.wishListItems.map((item) =>
             <div>
                  <div onClick={()=>deleteFromWishList(item._id)} className='wishListItem' key={item._id} >
-                 <span className='wishListAddToFav'><FaHeart style={{color:'grey'}}/> </span>
+                 <span className='wishListAddToFav'><FaHeart style={{color:'red'}}/> </span>
                  <img src={item.image} alt=''/>
                  <span className='wishListRating'>{item.rating} <FaStar style={{color:' rgb(255, 251, 0)'}}/></span>
                  <p className='wishListBrandName'>{item.brand}</p>
