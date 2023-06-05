@@ -8,6 +8,10 @@
     border-radius: 3px;
 }
 
+.filtersHeading{
+  font-size: x-large;
+}
+
 .filters-category{
     display: flex;
     flex-direction: column;
@@ -38,4 +42,17 @@ datalist {
   input[type="range"] {
     width: 200px;
     margin: 0;
+  }
+
+  .clear-btn{
+    font-size: 20px;
+    align-self:flex-end;
+    margin-top: -3rem;
+    margin-bottom: 4rem;
+    margin-right: -20px;
+    cursor: pointer;
+  }
+
+  .clear-btn:hover{
+        text-decoration: underline;
   }

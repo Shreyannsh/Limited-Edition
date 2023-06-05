@@ -33,7 +33,8 @@ export default function IndividualPage(){
            <p className='productPrice'> <span>&#x20B9;</span> {item.price}</p>
                 </div>
            <div className='allOtherBlock'>
-            <div className='wishlistr-btn'>
+            
+            <div className='wishlist-btn'>
             <span onClick={()=>addToWishList(item)} className='addToFav'> Add to Wishlist  </span>
            <span className='addToFavHeart' ><FaHeart style={{color:'grey'}}/></span>
             </div>

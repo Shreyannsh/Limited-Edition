@@ -13,20 +13,14 @@ export default function FilterProvider({children}){
 
     const initializer = {
         productList : [],
-        checkBoxValues:[]
+        checkBoxValues:[],
+        price:'500',
+        searchedText:'',
+        rating:'',
+        sort:''
     }
 
     const [state,dispatch] = useReducer(filterReducer,initializer);
-
-    const[items,setItems] = useState([])
-
-    const [price,setPrice] = useState('');
-
-    const [searchedText,setSearchedText] = useState('');
-
-    const [rating, setRating] = useState('');
-
-    const [sort,setSort] = useState('');
 
     // const [category,setCategory] = useState([]);
     // const[categoriesName,setCategoriesName] = useState([]);
@@ -91,27 +85,6 @@ export default function FilterProvider({children}){
     //     getCategories();
     // },[])
 
-   const productSearch =(e) =>{
-        const searchedText=e.target.value;
-        setSearchedText(searchedText);
-    }
-
-    const filterByPrice =(e) =>{
-        const value = e.target.value;
-        setPrice(Number(value));
-    }
-
-    const ratingFilter =(e) =>{
-        const value = e.target.value
-        setRating(value);
-    }
-
-    const sortFilter =(e) =>{
-
-        const value = e.target.value;
-        setSort(value);
-    }
-
     const displayProducts = () =>{
         
         let products = [...allProductList];
@@ -126,26 +99,26 @@ export default function FilterProvider({children}){
        })
      }
 
-     if(rating.length>0){
+     if(state.rating.length>0){
         ////// ('124')
-        products = products.filter((item) => Number(item.rating) >= Number(rating));
+        products = products.filter((item) => Number(item.rating) >= Number(state.rating));
       }
 
-     if(searchedText.length>0){
-        products = products.filter((item) => item.name.toLowerCase().includes(searchedText) ||  item.brand.toLowerCase().includes(searchedText));
+     if(state.searchedText.length>0){
+        products = products.filter((item) => item.name.toLowerCase().includes(state.searchedText) ||  item.brand.toLowerCase().includes(state.searchedText));
      }
 
-     if(price>500){
+     if(state.price>500){
       ////// (price)
-      products = products.filter((item) => Number(item.price) >= Number(price));
+      products = products.filter((item) => Number(item.price) >= Number(state.price));
       ////// (products)
      }
 
-     if(sort.length>0){
-        if(sort === 'highToLow'){
+     if(state.sort){
+        if(state.sort === 'highToLow'){
            products = products.sort((a,b) => b.price - a.price);
         }
-        if(sort === 'lowToHigh'){
+        if(state.sort === 'lowToHigh'){
             products = products.sort((a,b) => a.price - b.price);
         }
      }
@@ -166,7 +139,7 @@ export default function FilterProvider({children}){
 
     return(
         <div>
-            <filterContext.Provider value={{state,dispatch, displayProducts,filterByPrice, productSearch,searchedText,ratingFilter,sortFilter}}>
+            <filterContext.Provider value={{state,dispatch,displayProducts}}>
             {children}
             </filterContext.Provider>
             

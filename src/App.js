@@ -21,7 +21,7 @@ import IndividualPage from "./Pages/IndividualPage/IndividualPage";
 
 function App() {
 
-  const {searchedText,productSearch} = useContext(filterContext);
+  const {searchedText,productSearch,dispatch,state} = useContext(filterContext);
   const {isLoggedIn} = useContext(authContext);
 
   return (
@@ -29,7 +29,7 @@ function App() {
 
       <nav className='navBar'>
         <NavLink className='nav-logo' to='/'>LIMITED EDITION</NavLink>
-        <input onChange={(e) =>productSearch(e)} className='searchBar' placeholder='Search here' value={searchedText} type='text'/>
+        <input onChange={(e) =>dispatch({type:'productSearch', payload:e.target.value})} className='searchBar' placeholder='Search here' value={state.searchedText} type='text'/>
         <NavLink to='/productList'className='explore'>Explore</NavLink>
         <NavLink className='cart' to='/cart' ><FaShoppingCart/> <span>Cart</span></NavLink>
         <NavLink className='wishList' to='/wishlist'><FaHeart/> <span>Wishlist</span></NavLink>
