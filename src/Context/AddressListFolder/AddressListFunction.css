@@ -1,16 +1,32 @@
-.modalParent{
-    position: fixed;
-    inset:0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items:center;
-    justify-content:center;
+.addressComponent{
+    border: 1px solid;
+    font-size: large;
+    padding: 0rem 2rem;
+    list-style: none;
+    position: relative;
+    margin-bottom:1rem ;
+    box-shadow: 0px 0px 5px 0px rgb(0,0,0,0.6) ;
+    border-radius: 4px;
+    
 }
 
-.modalChild{
+ .userName{
+    font-size: x-large;
+    font-weight: 500;
+}
 
-    border: 1px solid;
-    width:500px;
-    height:500px;
-    background-color: #a09c9c;
+.addressComponent p{
+    text-align: left;
+    margin-bottom: -10px;
+}
+
+.addressComponent button{
+    margin: 2rem 2rem 1rem 2rem;
+    padding: 5px 10px;
+}
+
+.addressComponent input{
+    position: absolute;
+    left: 2px;
+    top: 27px
 }

@@ -9,12 +9,13 @@ export default function Checkout(){
 
    const {addressList,selectedAddress_Id} = useContext(addressContext);
    const {state,totalCartCount} = useContext(cartContext);
-    //console.log(selectedAddress_Id);
+    console.log(selectedAddress_Id);
     const [show,setShow] = useState(false);
 
     const showAddresList =() =>{
         setShow(!show);
     }
+    // const selectedAddress = addressList?.map((address) =>console.log( address._id));
 
    const selectedAddress = addressList?.find((address) => address._id === selectedAddress_Id);
 
