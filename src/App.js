@@ -51,9 +51,9 @@ function App() {
      <footer>
       <div className='footer-connect'>
       <header><b>Connect</b></header>
-      <p>Instagram</p>
-      <p>Facebook</p>
-      <p>Twitter</p>
+      <p className="connect">Instagram</p>
+      <p className="connect">Facebook</p>
+      <p className="connect">Twitter</p>
       </div>
       <div className='footer-address'>
       <header><b>Adrress</b></header>

@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
   
 }
 body{
@@ -146,10 +148,12 @@ body{
 }
 
 footer{
+  margin-top: 3rem;
   display: flex;
   align-self: flex-end;
   /* position:fixed; */
-  padding: 0px;
+  padding-top: 10px ;
+  width:100%;
   justify-content: space-around;
   background-color: rgb(87, 83, 83);
   color: #000000;
@@ -158,6 +162,11 @@ footer{
 }
 
 footer p{
-  font-size: 10px;
+  font-size: 15px;
   
+}
+
+.connect:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }

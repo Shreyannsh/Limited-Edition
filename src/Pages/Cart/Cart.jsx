@@ -13,8 +13,8 @@ export default function Cart(){
     const {state,deleteFromCart,incrementQuantity,decrementQuantity,totalCartCount} = useContext(cartContext);
   
     return(
-        <div style={{paddingTop:'5rem'}}  >
-        <h1>My Cart ({totalCartCount?.quantity ? totalCartCount?.quantity  : 0})</h1>
+        <div style={{display:'flex',paddingTop:'5rem'}}  >
+        <h1 className="cartHeading">My Cart ({totalCartCount?.quantity ? totalCartCount?.quantity  : 0})</h1>
             <div className="cartPage">
             <div className="cartItemList">
             { state?.initialCart && state?.initialCart?.map((item) =>

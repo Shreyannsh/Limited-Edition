@@ -8,8 +8,17 @@
 .allProducts{
     display: flex;
     flex-direction: row;
+    margin-top:4rem;
     margin-left: 5rem;
     grid-column-gap: 36px;
     grid-row-gap: 36px;
     flex-wrap: wrap;
+}
+
+.filters{
+    margin-top: 2.5rem;
+}
+
+.ProductListPage h1{
+    font-size: 3rem;
 }

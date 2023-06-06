@@ -9,7 +9,7 @@ export default function WishList(){
     const {addToCart} = useContext(cartContext);
     return(
         <div style={{ paddingTop: '5rem'}} className="wishListPage">
-            <h1>Your WishList</h1>
+            <h1>My WishList</h1>
             {state?.wishListItems.map((item) =>
             <div>
                  <div onClick={()=>deleteFromWishList(item._id)} className='wishListItem' key={item._id} >
