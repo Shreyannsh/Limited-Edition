@@ -3,8 +3,9 @@
     display:flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
+    gap:2rem;
 }
 
 .addresses{
@@ -18,20 +19,65 @@
 
 .change-btn{
     margin-top: 15px;
-   
-   
 }
 
 .change-btn button{
     padding: 7px 10px;
 }
 
+.addressList{
+    margin-top: 2rem;
+}
+
 .orderDetails{
     border: 1px solid;
-    
+    /* text-align: left; */
+    padding-left: 20px;
+    width: 30rem;
+    height: 35rem;
+    box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.orderDetails h2{
+    text-align: center;
 }
 
 .addressesSection{
     display: flex;
     flex-direction: column;
+}
+
+.itemName{
+    list-style: none;
+}
+
+.deliveryAddress{
+    text-align: center;
+}
+
+.orderName{
+    display: flex;
+    justify-content:space-between;
+    padding-right: 30px;
+}
+
+.subHeading{
+    display: flex;
+    justify-content:space-between;
+    padding-right: 30px;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.priceDetail{
+    display: flex;
+    justify-content:space-between;
+    padding-right: 30px;
+}
+
+.orderDetails button{
+    margin-top: 1rem;
+    padding: 10px 40px;
+    font-size: large;
 }

@@ -15,11 +15,9 @@
     align-items: center; */
 }
 .cartItemList{
-
     margin-left: 15rem;
     margin-top: 7rem;
     padding-bottom: 2rem;
-
 }
 
 .cartItem{
@@ -132,7 +130,7 @@
     text-align: left;
     right: 5rem;
     top: 12rem;
-    background-color: antiquewhite;
+    background-color: rgb(180, 180, 180);
     height: 24rem;
     width: 30rem;
     border-radius: 5px;
@@ -168,3 +166,7 @@
     border:none;
 }
 
+.emptyCart{
+    margin-top: 7rem;
+    font-size: 4rem;
+}

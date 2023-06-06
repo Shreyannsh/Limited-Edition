@@ -7,6 +7,10 @@ export default function Filters(){
 
     const {state,dispatch} = useContext(filterContext);
 
+    // if(category){
+    //     dispatch({type:'setSingleCategory',payload:category})
+    // }
+
     return(
 
         <div className='filters'>
@@ -28,16 +32,16 @@ export default function Filters(){
             <div  className="filters-category">
            
             {/* {categoriesName.map(item => <label><input onChange={filterByCategory} type = "checkbox" value ={item._id}/>{item.categoryName}</label>)} */}
-
-           <label ><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})}  value='laptop' type='checkbox' name='category' checked={state.checkBoxValues.includes('laptop')} />Laptop</label> 
-           <label><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='phones' type='checkbox' name='category' checked={state.checkBoxValues.includes('phones')} />Phone</label> 
-           <label ><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='watches'  type='checkbox' name='category' checked={state.checkBoxValues.includes('watches')} />Watches</label> 
-           <label ><input  onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='earbuds' type='checkbox' name='category' checked={state.checkBoxValues.includes('earbuds')} />Earbuds</label> 
-           <label ><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='gadgets' type='checkbox' name='category' checked={state.checkBoxValues.includes('gadgets')} />Gadgets</label> 
+            <p><b>Categories</b></p>
+           <label ><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})}  value='laptop' type='checkbox' name='category' checked={state.checkBoxValues.includes('laptop')} /> Laptop</label> 
+           <label><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='phones' type='checkbox' name='category' checked={state.checkBoxValues.includes('phones')} /> Phone</label> 
+           <label ><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='watches'  type='checkbox' name='category' checked={state.checkBoxValues.includes('watches')} /> Watches</label> 
+           <label ><input  onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='earbuds' type='checkbox' name='category' checked={state.checkBoxValues.includes('earbuds')} /> Earbuds</label> 
+           <label ><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='gadgets' type='checkbox' name='category' checked={state.checkBoxValues.includes('gadgets')} /> Gadgets</label> 
            </div>
 
            <div  className="filters-rating"> 
-           <p>Rating</p>
+           <p><b>Rating</b></p>
            <label><input onChange={(e)=>dispatch({type:'filterByRating',payload:e.target.value})} type='radio' name='rating' value='4' checked={state.rating ==='4'? true : false} /> 4 star & above</label> 
            <label><input onChange={(e)=>dispatch({type:'filterByRating',payload:e.target.value})} type='radio' name='rating' value='3' checked={state.rating ==='3'? true : false}/> 3 star & above</label> 
            <label><input onChange={(e)=>dispatch({type:'filterByRating',payload:e.target.value})} type='radio' name='rating' value='2'checked={state.rating ==='2'? true : false} /> 2 star & above</label> 
@@ -45,7 +49,7 @@ export default function Filters(){
            </div>
 
            <div  className="filters-sort">
-           <p>Sort by</p>
+           <p><b>Sort by</b></p>
            <label><input type='radio' name='sort' value ='highToLow' onChange={(e)=>dispatch({type:'filterBySort',payload:e.target.value})} checked={state.sort ==='highToLow'? true : false} /> High to Low</label> 
            <label><input type='radio' name='sort' value ='lowToHigh' onChange={(e)=>dispatch({type:'filterBySort',payload:e.target.value})} checked={state.sort ==='lowToHigh'? true : false} /> Low to High</label> 
            </div>

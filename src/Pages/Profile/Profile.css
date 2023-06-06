@@ -1,9 +1,8 @@
 .profilePage{
-    margin-top:10rem;
+    margin-top:8rem;
     display: flex;
     align-items:center;
     min-height: 32.1rem;
-   
     flex-direction: column;
     /* width: 50rem; */
 }

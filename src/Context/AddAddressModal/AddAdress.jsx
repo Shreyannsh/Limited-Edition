@@ -24,7 +24,7 @@ export const AddAddress = (props) =>{
         <div>
             <div className="modal">
             <div className="address">
-                <h2>Add Address</h2>
+                <h2 className='heading' >Add Address</h2>
                 <div>
                 <fieldset>
                     <legend>Name</legend>

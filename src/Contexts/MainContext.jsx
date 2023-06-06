@@ -22,7 +22,7 @@ export default function UniqueProvider({children}){
 
     return(
         <div>
-            <mainContext.Provider value={{allProductList}}>
+            <mainContext.Provider value={{allProductList,setAllProductList}}>
                 {children}
             </mainContext.Provider>
         </div>

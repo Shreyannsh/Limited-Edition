@@ -8,7 +8,8 @@
     padding-top: 7rem; 
     padding-bottom: 1rem; 
     display: flex;
-    background-color:rgb(216, 176, 31)
+    background-color:rgb(216, 176, 31);
+   
 }
 
 .about{
@@ -17,9 +18,11 @@
     /* border: 1px solid; */
     border-radius: 10px;
     width: 30rem;
+    margin-left: 7rem;
     
 }
 .para-1{
+    margin-top: 3rem;
     font-size:40px;
     font-weight: 600;
     /* font-family: 'Varela', sans-serif; */
@@ -27,6 +30,10 @@
     color:rgb(0, 0, 0);
     background-size: cover;
     background-image: url('');
+} 
+
+.para-1 p{
+    margin-top: -10px;
 }
 
 .para-2{
@@ -40,23 +47,32 @@
 }
 
 
-
+.para-3{
+    font-size: xx-large;
+}
 
 .about p{
     padding-bottom: -40px;
 }
 
 .category{
-    padding-left: 0rem;
+    padding-bottom: 2rem;
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: 10rem;
-    grid-column-gap: 36px;
-    grid-row-gap: 36px;
+    margin-left: 22rem;
+    grid-column-gap: 86px;
+    grid-row-gap: 56px;
 }
 
 .category-phones{
-    display: block;
+    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
+    color: rgb(255, 249, 249);
+    font-size: x-large;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     border: hidden;
     border-radius: 5px;
     height: 15rem;
@@ -68,7 +84,13 @@
 }
 
 .category-laptops{
-    display: block;
+    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     border: hidden;
     border-radius: 5px;
     height: 15rem;
@@ -81,7 +103,13 @@
 }
 
 .category-gadgets{
-    display: block;
+    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     border: hidden;
     border-radius: 5px;
     height: 15rem;
@@ -92,7 +120,13 @@
     background-image: url('https://m.media-amazon.com/images/I/71mqeFt2qPL._SX522_.jpg');
 }
 .category-earbuds{
-    display: block;
+    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     border: hidden;
     border-radius: 5px;
     height: 15rem;
@@ -104,7 +138,13 @@
       background-image: url('https://image01.oneplus.net/ebp/202012/04/1-m00-1e-00-rb8bwl_j9ewatjelaaj_14lbjxa475.png');
 }
 .category-watches{
-    display: block;
+    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     border: hidden;
     border-radius: 5px;
     height: 15rem;
@@ -115,7 +155,13 @@
     background-image: url('https://cdn.shopify.com/s/files/1/2309/2521/products/image_360x.jpg?v=1681470164');
 }
 .category-all{
-    display: block;
+    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
+    color: rgb(255, 246, 246);
+    font-size: x-large;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     border:hidden;
     border-radius: 5px;
     height: 15rem;

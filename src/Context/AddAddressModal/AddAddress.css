@@ -6,9 +6,42 @@
     align-items:center;
     justify-content:center;
 }
+.address .heading{
+    background-color:rgb(138, 132, 132);
+    margin-top: 0rem;
+    margin-left: -1.3rem;
+    margin-right: -1.3rem;
+    padding: 10px 30px;
+    border-top-left-radius:15px ;
+    border-top-right-radius:15px ;
+    text-align: center;
+  }
 
 .address{
-    width:500px;
-    height:500px;
+    width:550px;
+    height:620px;
+    border-radius: 15px;
     background-color: #fff;
+    padding: 0px 20px;
+    
+
+}
+
+fieldset{
+    text-align: left;
+    border-radius: 10px;
+    margin: 0.5rem;
+}
+
+input{
+    font-size: larger;
+    border: none;
+}
+
+.address-btns{
+    margin-top: 1.5rem;
+}
+
+.address-btns button{
+    padding: 10px 20px;
 }

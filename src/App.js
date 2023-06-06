@@ -17,8 +17,6 @@ import RequiresAuth from "./Context/RequiresAuth/RequiresAuth";
 import Checkout from "./Pages/Cart/Checkout/Checkout";
 import IndividualPage from "./Pages/IndividualPage/IndividualPage";
 
-
-
 function App() {
 
   const {searchedText,productSearch,dispatch,state} = useContext(filterContext);

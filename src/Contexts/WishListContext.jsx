@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useState, useEffect, useReducer } from "react";
 
 import { WishListReducer } from "../Reducer/wishListReducer";
 import { authContext } from "./AuthContext";
@@ -10,6 +10,7 @@ export default function WishListProvider({children}){
     const initializer={
         wishListItems :[]
     }
+    const [isAddToWishList,setIsAddToWishList] = useState(false);
     const [state,dispatch] = useReducer(WishListReducer, initializer)
 
     const getWishList = async() =>{
@@ -18,7 +19,7 @@ export default function WishListProvider({children}){
                 method:'GET',
                 headers: {authorization:  localStorage.getItem('encodedToken')}
             })
-            ////////// (await response.json());
+           
             const {wishlist} = await response.json();
             localStorage.setItem('whishList', wishlist)
             localStorage.getItem('wishList')
@@ -35,9 +36,9 @@ export default function WishListProvider({children}){
                 headers: {authorization:  localStorage.getItem('encodedToken')},
                 body:JSON.stringify({product: item})
             })
-            // ////////// (await response.json());
+           
             const {wishlist} = await response.json();
-            ////////// (wishlist);
+            
             localStorage.setItem('wishList', wishlist)
             localStorage.getItem('wishList')
             dispatch({type:'add',payload:wishlist})
@@ -49,13 +50,12 @@ export default function WishListProvider({children}){
     const deleteFromWishList = async(id) =>{
         
         try{
-            ////////// (id);
+            
             const response = await fetch(`/api/user/wishlist/${id}`,{
                 method:'DELETE',
                 headers: {authorization: localStorage.getItem('encodedToken')},
             })
            
-            // ////////// (await response.json());
             const {wishlist} = await response.json();
             localStorage.setItem('whishList', wishlist)
             localStorage.getItem('wishList')
@@ -73,7 +73,7 @@ export default function WishListProvider({children}){
 
     return(
         <div>
-            <wishListContext.Provider value={{state,dispatch,addToWishList,deleteFromWishList}}>
+            <wishListContext.Provider value={{state,dispatch,addToWishList,deleteFromWishList,isAddToWishList,setIsAddToWishList}}>
                 {children}
             </wishListContext.Provider>
            

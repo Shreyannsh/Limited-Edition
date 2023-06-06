@@ -19,7 +19,7 @@ export default function Checkout(){
 
    const selectedAddress = addressList?.find((address) => address._id === selectedAddress_Id);
 
-    //console.log(selectedAddress);
+    console.log(selectedAddress);
 
     return(
         <div className='checkoutPage'>
@@ -27,12 +27,11 @@ export default function Checkout(){
               <div className='addresses'>
                   <div>
                    <h3>Delivery Address</h3>
-                   <p>{selectedAddress.name},{selectedAddress.houseNumber},{selectedAddress.city},{selectedAddress.state},{selectedAddress.country},{selectedAddress.pincode},{selectedAddress.contactNumber}</p>
+                  { selectedAddress ? <p>{selectedAddress.name},{selectedAddress.houseNumber},{selectedAddress.city},{selectedAddress.state},{selectedAddress.country},{selectedAddress.pincode},{selectedAddress.contactNumber}</p> : 'Select Address for shipping!'}
                    </div>
-
-                  <div className='change-btn'>
-                  <button onClick={()=>showAddresList()}>{show ? 'Close' :'Change'}</button>
-                    </div>
+                   <div className='change-btn'>
+                   <button onClick={()=>showAddresList()}>{show ? 'Close' :'Select'}</button>
+                   </div>
                   </div>
                   <div className='addressList'style={{zIndex:'2'}}>
                       <AddressListFunction onClose={()=>setShow(false)} show={show} />
@@ -40,16 +39,17 @@ export default function Checkout(){
                  </div>
               <div className='orderDetails'>
                   <h2>ORDER DETAILS</h2>
-                  {state.initialCart.map((order) =><li>
-                    <p>{order.name} {order.qty }</p>
+                  <p  className='subHeading'> <span>Item </span> <span>Quantity</span> </p>
+                  {state.initialCart.map((order) =><li className='itemName'>
+                    <p className='orderName'> <span>{order.name}</span> <span>{order.qty} qty</span></p>
                   </li>)}
-                  <h2>Price DETAILS</h2>
-                    <p>Cart Price {totalCartCount.totalAmount}</p>
-                    <p>Discount 00</p>
-                    <p>Delivery Charges 250</p>
-                    <p>Total Amount {totalCartCount.totalAmount + 250}</p>
+                  <h2>Price Details</h2>
+                    <p className='priceDetail'>Cart Price <span>&#x20B9;{totalCartCount.totalAmount}</span> </p>
+                    <p className='priceDetail'>Discount <span>&#x20B9;00</span></p>
+                    <p className='priceDetail'>Delivery Charges <span>&#x20B9;250</span></p>
+                    <p className='priceDetail'>Total Amount <span>&#x20B9;{totalCartCount.totalAmount + 250}</span></p>
                     <h2>DELIVER TO</h2>
-                    <p>{selectedAddress.name},{selectedAddress.houseNumber},{selectedAddress.city},{selectedAddress.state},{selectedAddress.country},{selectedAddress.pincode},{selectedAddress.contactNumber}</p>
+                    <p className='deliveryAddress'> { selectedAddress ? <p>{selectedAddress.name},{selectedAddress.houseNumber},{selectedAddress.city},{selectedAddress.state},{selectedAddress.country},{selectedAddress.pincode},{selectedAddress.contactNumber}</p> : 'No shipping address added!'}</p>
 
                     <button>Place Order</button>
               </div>

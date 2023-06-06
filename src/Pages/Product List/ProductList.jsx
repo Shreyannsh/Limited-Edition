@@ -5,6 +5,7 @@ import { mainContext } from '../../Contexts/MainContext';
 import { filterContext } from '../../Contexts/FilterContext';
 import Filters from "../../Context/Filters/Filters";
 import ItemCard from '../../Context/itemCard/ItemCard';
+import { useParams } from 'react-router-dom';
 
 
 // import { FaRegHeart} from "react-icons/fa";
@@ -16,17 +17,17 @@ export default function ProductList(){
      const {state, displayProducts} = useContext(filterContext);
      const {allProductList} = useContext(mainContext)
      
-    const products =displayProducts()
+    const products =displayProducts();
 
     return(
         <div className='ProductListPage'>
             <div className='filters'>
-            <Filters />
+            <Filters/>
             </div>
         <div>
         <h1>Showing all products</h1>
         <div className='allProducts'>
-            {products.map((item) =><li key={item._id} style={{textDecoration:'none'}}>
+            {products.map((item) =><li key={item._id} className='oneByOne'>
              <ItemCard item={item} />
             </li> )}
             {/* {(state?.productList?.length>0 ? state?.productList : allProductList)?.map((item)=>(

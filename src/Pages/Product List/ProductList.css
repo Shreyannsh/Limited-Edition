@@ -22,3 +22,6 @@
 .ProductListPage h1{
     font-size: 3rem;
 }
+.oneByOne{
+    list-style: none;
+}

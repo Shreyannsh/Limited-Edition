@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { NavLink } from "react-router-dom";
 
-import { cartContext } from "../../Contexts/CartContext"
+import { cartContext } from "../../Contexts/CartContext";
 
 import './Cart.css'
 import { FaHeart, FaStar} from "react-icons/fa";
@@ -14,10 +14,12 @@ export default function Cart(){
   
     return(
         <div style={{display:'flex',paddingTop:'5rem'}}  >
+
         <h1 className="cartHeading">My Cart ({totalCartCount?.quantity ? totalCartCount?.quantity  : 0})</h1>
             <div className="cartPage">
+        
             <div className="cartItemList">
-            { state?.initialCart && state?.initialCart?.map((item) =>
+               { state?.initialCart.length>0 ?  state?.initialCart && state?.initialCart?.map((item) =>
                  <div className='cartItem' key={item._id} >
                  <span className='cartAddToFav'><FaHeart style={{color:'grey'}}/> </span>
                  <img src={item.image} alt=''/>
@@ -31,7 +33,7 @@ export default function Cart(){
                  <button className="cartButtonRemove" onClick={()=>deleteFromCart(item._id)}> Remove from Cart</button>
                  {/* {IsPresentInCart(item)?( <Link to='/cart'>Go to Cart</Link>) :('Add to Cart')} */}
              </div>
-            )}
+            ): <h1 className="emptyCart">Cart is Empty!</h1> }
             </div>
             <div className="priceDetails">
                 <h2>PRICE DETAILS</h2> 
@@ -39,8 +41,10 @@ export default function Cart(){
                 <p>Discount: <span>&#x20B9;0</span></p>
                 <p>Delivery Charges <span>&#x20B9;{state.initialCart.length>0?250:'0'}</span></p>
                 <p style={{fontSize:'20px'}}><b>Total Amount </b>  <b><span>&#x20B9;{state.initialCart.length ? totalCartCount?.totalAmount+250 : 0}</span> </b> </p>
-                <NavLink className='checkoutLink' to='/checkout'>Checkout</NavLink>
+                <NavLink  className='checkoutLink' to={state?.initialCart.length>0 ?'/checkout':'/barrier'}>Checkout</NavLink>
+
             </div>
+            
             </div>
         </div>
     )
