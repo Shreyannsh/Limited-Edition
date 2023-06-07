@@ -29,7 +29,7 @@
     font-family: 'Permanent Marker', cursive;
     color:rgb(0, 0, 0);
     background-size: cover;
-    background-image: url('');
+    /* background-image: url(''); */
 } 
 
 .para-1 p{
@@ -135,7 +135,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: azure;
-      /* background-image: url('https://image01.oneplus.net/ebp/202012/04/1-m00-1e-00-rb8bwl_j9ewatjelaaj_14lbjxa475.png'); */
+      background-image: url('https://image01.oneplus.net/ebp/202012/04/1-m00-1e-00-rb8bwl_j9ewatjelaaj_14lbjxa475.png');
 }
 .category-watches{
     box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);

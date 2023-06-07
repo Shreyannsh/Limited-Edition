@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext} from 'react';
 import { NavLink } from 'react-router-dom';
 import './itemCard.css'
 import { FaHeart, FaStar} from "react-icons/fa";
@@ -8,7 +8,6 @@ import { wishListContext } from '../../Contexts/WishListContext';
 
 export default function ItemCard({item}){
 
-    const [color,setColor] = useState('grey');
     const {state,addToCart} = useContext(cartContext);
     const {addToWishList,deleteFromWishList} = useContext(wishListContext);
 
@@ -19,20 +18,12 @@ export default function ItemCard({item}){
 
     const callWishList =() =>{
 
-         //console.log(item,item.isAddToWishList,color)
-
         if (!item.isAddToWishList){
-           
             item.isAddToWishList = !item.isAddToWishList;
-             //console.log('RED')
-            setColor('red')
-            addToWishList(item) 
+            addToWishList(item);
         } else{
-          
             item.isAddToWishList = !item.isAddToWishList;
-             //console.log('GREY')
-            deleteFromWishList(item._id)
-            setColor('grey')
+            deleteFromWishList(item._id);
         }
     }
 
