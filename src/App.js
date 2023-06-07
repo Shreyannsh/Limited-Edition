@@ -2,7 +2,7 @@ import "./App.css";
 // import Mockman from 'mockman-js'
 import {NavLink,Routes,Route} from 'react-router-dom'
 import { FaShoppingCart,FaHeart,} from "react-icons/fa";
-
+import { ToastContainer } from "react-toastify";
 import Signup from "./Pages/Login/Signup/Signup";
 import Cart from "./Pages/Cart/Cart";
 import Home from "./Pages/Home/Home";
@@ -16,10 +16,9 @@ import Profile from "./Pages/Profile/Profile";
 import RequiresAuth from "./Context/RequiresAuth/RequiresAuth";
 import Checkout from "./Pages/Cart/Checkout/Checkout";
 import IndividualPage from "./Pages/IndividualPage/IndividualPage";
-import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
+function App() { 
 
   const {dispatch,state} = useContext(filterContext);
   const {isLoggedIn} = useContext(authContext);
