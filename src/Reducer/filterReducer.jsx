@@ -1,15 +1,6 @@
 
 export const filterReducer = (state,action)=>{
     switch(action.type){
-        // case 'allProducts' :{
-        //     ////////// ('hey')
-        //     return {...state, productList :action.payload}
-        // }
-
-        // case 'addCategory' :{
-        //     //////// (action,'action')
-        //     return {...state, productList: action.payload}
-        // }
 
         case 'productSearch':{
             return{

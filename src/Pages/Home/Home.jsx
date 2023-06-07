@@ -1,15 +1,12 @@
 import './Home.css'
 
 import { useContext } from "react";
-import {Link, Route, Routes} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
-import { mainContext } from '../../Contexts/MainContext';
-import ProductList from '../Product List/ProductList';
 import { filterContext } from '../../Contexts/FilterContext';
 
 export default function Home(){
 
-    const {items} = useContext(mainContext);
     const {dispatch} = useContext(filterContext);
 
     return(

@@ -1,5 +1,4 @@
-import { createContext, useContext, useState,useEffect,useReducer } from "react";
-import { authContext } from "./AuthContext";
+import { createContext,useEffect,useReducer } from "react";
 import { cartReducer } from "../Reducer/cartReducer";
 export const cartContext = createContext();
 
@@ -101,7 +100,6 @@ export default function CartProvider({children}){
 
     const totalCartCount = state?.initialCart?.reduce((acc,crr)=>{
         acc.quantity = acc.quantity + crr.qty;
-       
         acc.totalAmount = acc.totalAmount + (Number(crr.price)* crr.qty);
         return acc;
     },

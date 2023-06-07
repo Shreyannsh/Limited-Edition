@@ -1,5 +1,5 @@
 import "./App.css";
-import Mockman from 'mockman-js'
+// import Mockman from 'mockman-js'
 import {NavLink,Routes,Route} from 'react-router-dom'
 import { FaShoppingCart,FaHeart,} from "react-icons/fa";
 
@@ -19,7 +19,7 @@ import IndividualPage from "./Pages/IndividualPage/IndividualPage";
 
 function App() {
 
-  const {searchedText,productSearch,dispatch,state} = useContext(filterContext);
+  const {dispatch,state} = useContext(filterContext);
   const {isLoggedIn} = useContext(authContext);
 
   return (

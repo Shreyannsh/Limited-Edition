@@ -1,5 +1,5 @@
 export const cartReducer =(state,action) =>{
-    ////////// (action.type,action.payload)
+    
     switch(action.type){
 
         case 'get':{
@@ -12,7 +12,7 @@ export const cartReducer =(state,action) =>{
 
         case 'delete':
          {
-           ////////// (action)
+        
             return {...state, initialCart: action.payload};
          }
          

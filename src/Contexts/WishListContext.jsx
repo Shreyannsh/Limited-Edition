@@ -1,7 +1,5 @@
 import { createContext, useState, useEffect, useReducer } from "react";
-
 import { WishListReducer } from "../Reducer/wishListReducer";
-import { authContext } from "./AuthContext";
 
 export const wishListContext = createContext();
 

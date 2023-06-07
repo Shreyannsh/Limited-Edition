@@ -1,7 +1,6 @@
-import { useContext, useState } from 'react';
+import { useContext} from 'react';
 import './Filters.css';
 import { filterContext } from '../../Contexts/FilterContext';
-import { categories } from '../../backend/db/categories';
 
 export default function Filters(){
 

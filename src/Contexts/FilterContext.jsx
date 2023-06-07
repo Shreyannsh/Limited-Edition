@@ -1,9 +1,7 @@
-import { createContext,useReducer, useState,useContext, useEffect} from "react";
+import { createContext,useReducer,useContext} from "react";
 
 import { filterReducer } from "../Reducer/filterReducer";
-import { categories } from "../backend/db/categories";
 import { mainContext } from "./MainContext";
-import ProductList from "../Pages/Product List/ProductList";
 
 export const filterContext = createContext();
 

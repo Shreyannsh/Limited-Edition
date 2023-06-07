@@ -10,7 +10,7 @@ export default function ItemCard({item}){
 
     const [color,setColor] = useState('grey');
     const {state,addToCart} = useContext(cartContext);
-    const {addToWishList,deleteFromWishList,isAddToWishList,setIsAddToWishList} = useContext(wishListContext);
+    const {addToWishList,deleteFromWishList} = useContext(wishListContext);
 
     const IsPresentInCart = (item) =>{
         const findItem = state?.initialCart?.find(({_id}) => _id === item._id)
@@ -22,24 +22,19 @@ export default function ItemCard({item}){
         console.log(item,item.isAddToWishList,color)
 
         if (!item.isAddToWishList){
-            //  setIsAddToWishList(!isAddToWishList)
+           
             item.isAddToWishList = !item.isAddToWishList;
             console.log('RED')
             setColor('red')
             addToWishList(item) 
         } else{
-            //  setIsAddToWishList(!isAddToWishList)
+          
             item.isAddToWishList = !item.isAddToWishList;
             console.log('GREY')
             deleteFromWishList(item._id)
             setColor('grey')
         }
     }
-
-    // useEffect(()=>{
-    //     setIsAddToWishList(!isAddToWishList)
-    // },[])
-    //console.log(isAddToWishList,color)
 
     return (
 

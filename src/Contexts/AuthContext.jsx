@@ -2,7 +2,6 @@ import { createContext, useState, useReducer } from "react";
 import axios from 'axios';
 import { authReducer } from "../Reducer/authReducer";
 import { useNavigate,useLocation } from "react-router-dom";
-import Login from "../Pages/Login/Login";
 
 export const authContext = createContext();
  
@@ -18,15 +17,13 @@ export default function AuthProvider({children}){
         signupRePassword:''
     }
 
-    const [state,dispatch] = useReducer(authReducer,initializer)
+    const [state,dispatch] = useReducer(authReducer,initializer);
 
     const navigate = useNavigate();
     const location = useLocation();
 
-    const [logInError,setLogInError] = useState('')
-    const [signupError,setSignupError] = useState('')
-
-    const [isLoggedIn,setIsLoggedIn] = useState(false)
+    const [logInError,setLogInError] = useState('');
+    const [isLoggedIn,setIsLoggedIn] = useState(false);
 
   
     const login = async() =>{
@@ -74,7 +71,6 @@ export default function AuthProvider({children}){
     // }
 
     const guestLogin = () =>{
-        ////// ('hey')
         dispatch({type:'guestLogin'})
         login();
     }
@@ -113,10 +109,6 @@ export default function AuthProvider({children}){
 
         signUp()
     }
-
-
-    ////// (isLoggedIn)
-    // ////// ( state);
 
     return(
         <div >

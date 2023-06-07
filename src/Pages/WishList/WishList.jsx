@@ -7,26 +7,22 @@ import { mainContext } from "../../Contexts/MainContext";
 
 export default function WishList(){
     const {state,deleteFromWishList} = useContext(wishListContext);
-    const {allProductList,setAllProductList} = useContext(mainContext)
+    const {allProductList,setAllProductList} = useContext(mainContext);
     const {addToCart} = useContext(cartContext);
 
     const deleteItemFromWishList = (item) =>{
 
        const updatedList =  allProductList.map((product) =>{
         if(product._id === item._id) {
-           return {...product, isAddToWishList:!product.isAddToWishList}
+           return {...product, isAddToWishList:!product.isAddToWishList};
         }  else{
-            return{...product}
+            return{...product};
         }
         })
 
         setAllProductList(updatedList);
         deleteFromWishList(item._id);
     }
-
-    
-
-    console.log(allProductList);
 
     return(
         <div style={{ paddingTop: '5rem'}} className="wishListPage">

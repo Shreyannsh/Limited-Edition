@@ -3,14 +3,9 @@ import { v4 as uuid } from 'uuid';
 export const addressReducer = (addState,action) =>{
     switch(action.type){
 
-        case'':{
-            
-        }
-
         case'addAddress':
         return {...addState,...action.payload};
-        // addresses: [...addState.addresses,action.payload];
-
+        
         case'name':
         return {...addState, name:action.payload.target.value}
 

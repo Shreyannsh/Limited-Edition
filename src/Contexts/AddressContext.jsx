@@ -1,4 +1,4 @@
-import { createContext,useState,useReducer, useContext,useEffect} from "react";
+import { createContext,useState,useReducer, useEffect} from "react";
 import { v4 as uuid } from 'uuid';
 
 import { addressReducer } from "../Reducer/addressReducer";
@@ -41,14 +41,6 @@ export default function AddressProvider({children}){
         }
        
     };
-
-    // const selectedAddress_Id = (e) =>{
-    //      //console.log(e)
-    //     const value = e.target.value;
-    //      //console.log(value)
-    //     return value;
-    // }
-
 
     const removeAddress =(address) =>{
         setAddressList(addressList.filter((add) => add !== address ))

@@ -1,6 +1,6 @@
 import './AddAddress.css';
 
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import { addressContext } from "../../Contexts/AddressContext";
 
