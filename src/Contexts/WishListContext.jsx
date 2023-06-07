@@ -1,5 +1,7 @@
 import { createContext, useState, useEffect, useReducer } from "react";
 import { WishListReducer } from "../Reducer/wishListReducer";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const wishListContext = createContext();
 
@@ -23,7 +25,7 @@ export default function WishListProvider({children}){
             localStorage.getItem('wishList')
             dispatch({type:'get',payload:wishlist})
         }catch(error){
-
+            toast.error('Error from Server')
         }
     }
 
@@ -40,9 +42,11 @@ export default function WishListProvider({children}){
             localStorage.setItem('wishList', wishlist)
             localStorage.getItem('wishList')
             dispatch({type:'add',payload:wishlist})
+            toast('Added to Wishlist')
         }catch(error){
-
+            toast.error('Error from Server')
         }
+      
     }
 
     const deleteFromWishList = async(id) =>{
@@ -58,10 +62,15 @@ export default function WishListProvider({children}){
             localStorage.setItem('whishList', wishlist)
             localStorage.getItem('wishList')
             dispatch({type:'delete',payload:wishlist})
+            toast('Removed from Wishlist')
         }catch(error){
-            console.error(error)
+            toast.error('Error from Server')
         }
     }
+
+    const clearWishlist = () =>{
+        state.wishListItems.map((item) => deleteFromWishList(item._id))
+}
 
     useEffect(()=>{
         getWishList();
@@ -71,7 +80,7 @@ export default function WishListProvider({children}){
 
     return(
         <div>
-            <wishListContext.Provider value={{state,dispatch,addToWishList,deleteFromWishList,isAddToWishList,setIsAddToWishList}}>
+            <wishListContext.Provider value={{state,dispatch,addToWishList,deleteFromWishList,isAddToWishList,setIsAddToWishList,clearWishlist}}>
                 {children}
             </wishListContext.Provider>
            

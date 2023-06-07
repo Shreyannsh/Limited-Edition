@@ -1,23 +1,25 @@
 import { useContext } from "react"
 import { NavLink } from "react-router-dom";
-
 import { cartContext } from "../../Contexts/CartContext";
 
 import './Cart.css'
 import { FaHeart, FaStar} from "react-icons/fa";
+import { toast } from "react-toastify";
 
-
+const restriction = () =>{
+    toast.error('Cart is Empty')
+}
 
 
 export default function Cart(){
-    const {state,deleteFromCart,incrementQuantity,decrementQuantity,totalCartCount} = useContext(cartContext);
+    const {state,deleteFromCart,incrementQuantity,decrementQuantity,totalCartCount,isLoading} = useContext(cartContext);
   
     return(
         <div style={{display:'flex',paddingTop:'5rem'}}  >
 
         <h1 className="cartHeading">My Cart ({totalCartCount?.quantity ? totalCartCount?.quantity  : 0})</h1>
             <div className="cartPage">
-        
+            {isLoading &&  <div className='loadingImage'><img src='https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif' alt='loading' /> </div>}
             <div className="cartItemList">
                { state?.initialCart?.length>0 ?  state?.initialCart && state?.initialCart?.map((item) =>
                  <div className='cartItem' key={item._id} >
@@ -41,7 +43,7 @@ export default function Cart(){
                 <p>Discount: <span>&#x20B9;0</span></p>
                 <p>Delivery Charges <span>&#x20B9;{state.initialCart.length>0?250:'0'}</span></p>
                 <p style={{fontSize:'20px'}}><b>Total Amount </b>  <b><span>&#x20B9;{state.initialCart.length ? totalCartCount?.totalAmount+250 : 0}</span> </b> </p>
-                <NavLink  className='checkoutLink' to={state?.initialCart.length>0 ?'/checkout':'/barrier'}>Checkout</NavLink>
+               {state?.initialCart?.length>0 ? <NavLink  className='checkoutLink' to={state?.initialCart.length>0 ?'/checkout':'/barrier'}>Checkout</NavLink> : <NavLink className='checkoutLink' onClick={()=>restriction()}>Checkout</NavLink>} 
 
             </div>
             

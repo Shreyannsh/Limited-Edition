@@ -3,10 +3,23 @@ import {Link} from 'react-router-dom';
 import { useContext } from "react";
 
 import { authContext } from "../../Contexts/AuthContext";
+import { toast } from 'react-toastify';
 
 export default function Login(){
 
-    const {state,dispatch,login,logInError} = useContext(authContext)
+    const {state,dispatch,login,logInError} = useContext(authContext);
+
+    const loginDetails =() =>{
+        if(!state.loginEmail) {
+            toast.error('Enter Email Id')
+        }
+        if(!state.loginPassword){
+            toast.error('Enter Password!')
+        }
+       if (state.loginEmail && state.loginPassword){
+         login()
+       }
+    }
 
     return(
         <div className='parentDiv'>
@@ -19,7 +32,7 @@ export default function Login(){
           
             <p className='elements'>  <label>  <input className='rememberMe' type='checkbox' /> Remember me</label> <span> Forgot your Password? </span></p>
             <span className='loginError'>{logInError}</span>
-            <button className='buttonLogin' onClick={login} >Login</button>
+            <button className='buttonLogin' onClick={loginDetails} >Login</button>
             <Link className='createNewAccount' to='/signup'> Create New Account </Link> 
             
         </div>

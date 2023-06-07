@@ -27,6 +27,11 @@ export const authReducer = (state,action) => {
             lastName:'Balika',}
         }
 
+        case 'logout':{
+            return {...state,loginEmail:"", loginPassword:"", firstName:'',
+            lastName:'',}
+        }
+
         default :
         return state;
     }

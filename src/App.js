@@ -16,6 +16,8 @@ import Profile from "./Pages/Profile/Profile";
 import RequiresAuth from "./Context/RequiresAuth/RequiresAuth";
 import Checkout from "./Pages/Cart/Checkout/Checkout";
 import IndividualPage from "./Pages/IndividualPage/IndividualPage";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -24,6 +26,18 @@ function App() {
 
   return (
     <div className="App">
+       <ToastContainer
+                position="bottom-left"
+                autoClose={700}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
 
       <nav className='navBar'>
         <NavLink className='nav-logo' to='/'>LIMITED EDITION</NavLink>
@@ -64,8 +78,7 @@ function App() {
       <p>limitedEditon@gmail.com</p>
       </div>
      
-     </footer>
-    
+     </footer>    
     </div>
   );
 }

@@ -6,23 +6,29 @@ import { useNavigate } from "react-router-dom";
 import { authContext } from "../../Contexts/AuthContext";
 import  {AddressListFunction}  from "../../Context/AddressListFolder/AddressListFunction";
 import { wishListContext } from "../../Contexts/WishListContext";
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { cartContext } from '../../Contexts/CartContext';
 
 export default function Profile(){
 
     const navigate = useNavigate();
+    const {clearCart} = useContext(cartContext);
     const {setIsLoggedIn} = useContext(authContext);
     const {state} = useContext(authContext);
-    const {dispatch} = useContext(wishListContext);
+    const {clearWishlist} = useContext(wishListContext);
     const [showAddress, setShowAddress] = useState(false);
     const [showProfile,setShowProfile] = useState(true);
-    // const {dispatch} = useContext(wishListContext);
+    const {dispatch} = useContext(authContext);
 
     const logout = () =>{
-        dispatch({type:'clearWishList'})
+        clearCart();
+        clearWishlist();
+        dispatch({type:'logout'})
         navigate('/login');
         setIsLoggedIn(false);
         localStorage.removeItem('encodedToken');
+        toast('Logged Out!')
     }
 
 
@@ -36,7 +42,7 @@ export default function Profile(){
         setShowAddress(false);
         setShowProfile(true);
     }
-
+  
     return(
         <div className="profilePage">
 

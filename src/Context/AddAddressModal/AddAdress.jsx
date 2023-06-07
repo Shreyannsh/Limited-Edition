@@ -3,6 +3,8 @@ import './AddAddress.css';
 import { useContext } from "react";
 
 import { addressContext } from "../../Contexts/AddressContext";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const AddAddress = (props) =>{
 
@@ -11,13 +13,20 @@ export const AddAddress = (props) =>{
     if(!props.show){
         return null;
     }
-
+    
+    const addressValues = Object.values(addState).includes('');
+  
     const addressDetails =() =>{
-        if(props.mode==='update'){
-            addAddress("update");
+        if(!addressValues){
+            if(props.mode==='update'){
+                addAddress("update");
+            }else{
+                addAddress("add");
+            }
         }else{
-            addAddress("add");
+            toast('all fields are mandatory to fill')
         }
+       
     }
    
     return(

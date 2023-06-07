@@ -5,12 +5,13 @@ import { addressContext, } from "../../../Contexts/AddressContext";
 
 import  {AddressListFunction}  from "../../../Context/AddressListFolder/AddressListFunction";
 import { cartContext } from '../../../Contexts/CartContext';
+import { toast } from 'react-toastify'; 
+
 export default function Checkout(){
 
    const {addressList,selectedAddress_Id} = useContext(addressContext);
    const {state,totalCartCount} = useContext(cartContext);
-     //console.log(selectedAddress_Id);
-    const [show,setShow] = useState(false);
+   const [show,setShow] = useState(false);
 
     const showAddresList =() =>{
         setShow(!show);
@@ -19,7 +20,9 @@ export default function Checkout(){
 
    const selectedAddress = addressList?.find((address) => address._id === selectedAddress_Id);
 
-     //console.log(selectedAddress);
+    const placeOrder =() =>{
+      toast('Feature will be added very soon!')
+    }
 
     return(
         <div className='checkoutPage'>
@@ -51,7 +54,7 @@ export default function Checkout(){
                     <h2>DELIVER TO</h2>
                      { selectedAddress ? <p className='deliveryAddress'>{selectedAddress.name},{selectedAddress.houseNumber},{selectedAddress.city},{selectedAddress.state},{selectedAddress.country},{selectedAddress.pincode},{selectedAddress.contactNumber}</p> : <p> 'No shipping address added!' </p>}
 
-                    <button>Place Order</button>
+                    <button onClick={()=>placeOrder()}>Place Order</button>
               </div>
         </div>
     )

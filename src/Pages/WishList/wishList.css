@@ -1,6 +1,6 @@
 .wishListPage{
     padding-top: 15rem;
-    min-height: 32.1rem;
+    min-height: 35.1rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -111,4 +111,22 @@ button{
     .wishListComponent .emptyWishList{
        margin-left: 35rem;
        font-size: 4rem;
+    }
+
+    .cartLink{
+        color: black;
+        text-decoration: none;
+        margin: 0rem 2rem;
+        padding: 0.4rem 0rem;
+        border-radius: 5px;
+        background-color:  rgb(216, 176, 31);
+        font-weight: 600;
+        border: 2px solid;
+        font-size: 15px;
+    }
+    
+    .cartLink:hover{
+        color: rgb(216, 176, 31);
+        background-color: black;
+        border:none;
     }

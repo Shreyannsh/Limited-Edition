@@ -3,6 +3,7 @@
     flex-direction: row;
     /* color:aqua; */
     padding-top: 5rem;
+    padding-bottom: 2rem;
 }
 
 .allProducts{
@@ -10,9 +11,10 @@
     flex-direction: row;
     margin-top:4rem;
     margin-left: 5rem;
-    grid-column-gap: 36px;
-    grid-row-gap: 36px;
+    column-gap: 36px;
+    row-gap: 36px;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .filters{
@@ -24,4 +26,10 @@
 }
 .oneByOne{
     list-style: none;
+}
+
+.loadingImage{
+ position:relative;
+ top: 20%; 
+ left: 100%; 
 }

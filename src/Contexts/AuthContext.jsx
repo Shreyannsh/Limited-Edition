@@ -2,6 +2,8 @@ import { createContext, useState, useReducer } from "react";
 import axios from 'axios';
 import { authReducer } from "../Reducer/authReducer";
 import { useNavigate,useLocation } from "react-router-dom";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const authContext = createContext();
  
@@ -36,15 +38,14 @@ export default function AuthProvider({children}){
             const response = await axios.post('/api/auth/login',credintials);
 
             const encodedToken = response.data.encodedToken;
-
+            toast('Logged In!')
             localStorage.setItem('encodedToken',encodedToken);
             setLogInError('');
             setIsLoggedIn(true);
             let from = location.state?.from?.pathname || '/';
             navigate(from);
         }catch(error){
-            ////// (error);
-            setLogInError(error.message);
+            toast.error('Invaild Credentials')
         }
     }
 
@@ -87,32 +88,33 @@ export default function AuthProvider({children}){
             const encodedToken = response.data.encodedToken;
             localStorage.setItem('encodedToken',encodedToken);
 
-            let from = location.state?.from?.pathname || '/';
-            navigate(from)
+            toast('Great! Time to log In')
+           
+            navigate('/login')
     
         }catch(error){
-                ////// (error.message);
+            toast.error('Error from Server')
             }
     }
 
     const signUpDetails = () =>{
         
         if(!state.firstName || !state.lastName || !state.signupEmail || !state.signupPassword || !state.signupRePassword ){
-            return   alert('filling all fields are mandatory')
+            return   toast.error('filling all fields are mandatory')
         
         }
 
         if (state.signupPassword !== state.signupRePassword ){
-           return  alert('Passwords do not match')
+           return   toast.error('Passwords do not match')
         }
 
         if(state.signupRePassword.length<8){
-           return  alert('Password must be minimum 8 character long')
+           return   toast.error('Password must be minimum 8 characters long')
         }
 
         signUp()
     }
-
+    console.log(state);
     return(
         <div >
           <authContext.Provider value={{login,signUpDetails,dispatch,logInError,guestLogin,isLoggedIn,state,setIsLoggedIn}}>
