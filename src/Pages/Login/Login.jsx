@@ -9,7 +9,7 @@ export default function Login(){
     const {state,dispatch,login,logInError} = useContext(authContext)
 
     return(
-        <div className='parentDiv' style={{}}>
+        <div className='parentDiv'>
         <div className= 'loginPage' >
             <h1>Login</h1> <span onClick ={() =>dispatch({type:'guestLogin'})}className='guest'>Guest Login</span>
             <p className='headingEmailAddress'>Email address</p>
@@ -34,7 +34,7 @@ export default function Login(){
             // }}
 
 
- {/* <button onClick={login}>LogIn</button>
-          <button onClick={signUp}>SignUp</button>  */}
+//  <button onClick={login}>LogIn</button>
+//           <button onClick={signUp}>SignUp</button>  
 
         //   style={{marginTop:'10rem', marginLeft:'45rem',marginRight:'50rem',marginBottom:'13.5rem'}}

@@ -48,7 +48,7 @@ export default function AddressProvider({children}){
 
     useEffect(()=>{
         addAddress('add');
-    },[])
+    },[]);
     
     return(
         <div>

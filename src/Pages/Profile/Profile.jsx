@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 import { authContext } from "../../Contexts/AuthContext";
 import  {AddressListFunction}  from "../../Context/AddressListFolder/AddressListFunction";
-import { cartContext} from "../../Contexts/CartContext";
 import { wishListContext } from "../../Contexts/WishListContext";
 
 

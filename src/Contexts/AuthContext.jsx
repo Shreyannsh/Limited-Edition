@@ -83,7 +83,10 @@ export default function AuthProvider({children}){
             lastName: state.lastName
         }
         try{
-            const response = await axios.post('/api/auth/signup',cred)   ;
+            const response = await axios.post('/api/auth/signup',cred);
+            const encodedToken = response.data.encodedToken;
+            localStorage.setItem('encodedToken',encodedToken);
+
             let from = location.state?.from?.pathname || '/';
             navigate(from)
     

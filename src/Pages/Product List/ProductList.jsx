@@ -1,7 +1,6 @@
 import './ProductList.css'
 
 import { useContext } from "react";
-import { mainContext } from '../../Contexts/MainContext';
 import { filterContext } from '../../Contexts/FilterContext';
 import Filters from "../../Context/Filters/Filters";
 import ItemCard from '../../Context/itemCard/ItemCard';

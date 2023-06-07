@@ -1,7 +1,6 @@
 import { createContext,useReducer,useContext} from "react";
 
 import { filterReducer } from "../Reducer/filterReducer";
-import { mainContext } from "./MainContext";
 
 export const filterContext = createContext();
 
@@ -93,7 +92,7 @@ export default function FilterProvider({children}){
         allProductList.filter((item) => item.categoryName === cbValue));
          ////// (items)
         items.map((array) =>{
-        products = [...products,...array]
+        return products = [...products,...array]
        })
      }
 

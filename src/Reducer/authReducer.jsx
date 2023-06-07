@@ -26,5 +26,8 @@ export const authReducer = (state,action) => {
             return {...state,loginEmail:"adarshbalika@gmail.com", loginPassword:"adarshbalika", firstName:'Adarsh',
             lastName:'Balika',}
         }
+
+        default :
+        return state;
     }
 } 
