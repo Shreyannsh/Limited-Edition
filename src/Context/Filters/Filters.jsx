@@ -33,11 +33,11 @@ export default function Filters(){
            
             {/* {categoriesName.map(item => <label><input onChange={filterByCategory} type = "checkbox" value ={item._id}/>{item.categoryName}</label>)} */}
             <p><b>Categories</b></p>
-           <label ><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})}  value='laptop' type='checkbox' name='category' checked={state.checkBoxValues.includes('laptop')} /> Laptop</label> 
-           <label><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='phones' type='checkbox' name='category' checked={state.checkBoxValues.includes('phones')} /> Phone</label> 
-           <label ><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='watches'  type='checkbox' name='category' checked={state.checkBoxValues.includes('watches')} /> Watches</label> 
-           <label ><input  onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='earbuds' type='checkbox' name='category' checked={state.checkBoxValues.includes('earbuds')} /> Earbuds</label> 
-           <label ><input onClick={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='gadgets' type='checkbox' name='category' checked={state.checkBoxValues.includes('gadgets')} /> Gadgets</label> 
+           <label ><input onChange={(e)=>dispatch({type:'checkBoxValue',payload:(e)})}  value='laptop' type='checkbox' name='category' checked={state.checkBoxValues.includes('laptop')} /> Laptop</label> 
+           <label><input onChange={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='phones' type='checkbox' name='category' checked={state.checkBoxValues.includes('phones')} /> Phone</label> 
+           <label ><input onChange={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='watches'  type='checkbox' name='category' checked={state.checkBoxValues.includes('watches')} /> Watches</label> 
+           <label ><input  onChange={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='earbuds' type='checkbox' name='category' checked={state.checkBoxValues.includes('earbuds')} /> Earbuds</label> 
+           <label ><input onChange={(e)=>dispatch({type:'checkBoxValue',payload:(e)})} value='gadgets' type='checkbox' name='category' checked={state.checkBoxValues.includes('gadgets')} /> Gadgets</label> 
            </div>
 
            <div  className="filters-rating"> 

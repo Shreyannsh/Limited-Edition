@@ -19,7 +19,7 @@ export default function Cart(){
             <div className="cartPage">
         
             <div className="cartItemList">
-               { state?.initialCart.length>0 ?  state?.initialCart && state?.initialCart?.map((item) =>
+               { state?.initialCart?.length>0 ?  state?.initialCart && state?.initialCart?.map((item) =>
                  <div className='cartItem' key={item._id} >
                  <span className='cartAddToFav'><FaHeart style={{color:'grey'}}/> </span>
                  <img src={item.image} alt=''/>
