@@ -16,7 +16,7 @@ import Profile from "./Pages/Profile/Profile";
 import RequiresAuth from "./Context/RequiresAuth/RequiresAuth";
 import Checkout from "./Pages/Cart/Checkout/Checkout";
 import IndividualPage from "./Pages/IndividualPage/IndividualPage";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
