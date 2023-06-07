@@ -67,7 +67,7 @@ export default function WishListProvider({children}){
         getWishList();
     },[]);
 
-    console.log(state.wishListItems)
+     //console.log(state.wishListItems)
 
     return(
         <div>

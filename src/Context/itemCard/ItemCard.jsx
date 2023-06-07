@@ -19,18 +19,18 @@ export default function ItemCard({item}){
 
     const callWishList =() =>{
 
-        console.log(item,item.isAddToWishList,color)
+         //console.log(item,item.isAddToWishList,color)
 
         if (!item.isAddToWishList){
            
             item.isAddToWishList = !item.isAddToWishList;
-            console.log('RED')
+             //console.log('RED')
             setColor('red')
             addToWishList(item) 
         } else{
           
             item.isAddToWishList = !item.isAddToWishList;
-            console.log('GREY')
+             //console.log('GREY')
             deleteFromWishList(item._id)
             setColor('grey')
         }
