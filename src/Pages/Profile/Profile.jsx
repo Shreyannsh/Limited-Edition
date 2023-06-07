@@ -20,6 +20,7 @@ export default function Profile(){
     const [showAddress, setShowAddress] = useState(false);
     const [showProfile,setShowProfile] = useState(true);
     const {dispatch} = useContext(authContext);
+    const [show,setShow] = useState();
 
     const logout = () =>{
         clearCart();
@@ -35,12 +36,14 @@ export default function Profile(){
     const showAddresses = () =>{
         setShowProfile(false);
         setShowAddress(true);
+        setShow(true)
        
     }
 
     const showProfileDetails =() =>{
         setShowAddress(false);
         setShowProfile(true);
+        setShow(false)
     }
   
     return(
@@ -66,7 +69,7 @@ export default function Profile(){
                     </div>
                     
                     <div className='addressList'style={{display:showAddress ? 'block': 'none'}} >
-                        <AddressListFunction show={true}/>
+                        <AddressListFunction show={show}/>
                     </div>
                 </div>
         </div>

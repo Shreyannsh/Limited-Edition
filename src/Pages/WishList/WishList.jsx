@@ -6,8 +6,6 @@ import { wishListContext } from "../../Contexts/WishListContext";
 import { cartContext } from "../../Contexts/CartContext";
 import { mainContext } from "../../Contexts/MainContext";
 import {Link} from 'react-router-dom'
-import {  toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 export default function WishList(){
     const {state,deleteFromWishList} = useContext(wishListContext);
