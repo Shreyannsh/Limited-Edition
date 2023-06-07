@@ -40,7 +40,7 @@ export default function Checkout(){
               <div className='orderDetails'>
                   <h2>ORDER DETAILS</h2>
                   <p  className='subHeading'> <span>Item </span> <span>Quantity</span> </p>
-                  {state.initialCart.map((order) =><li className='itemName'>
+                  {state.initialCart.map((order) =><li className='itemName' key={order._id}>
                     <p className='orderName'> <span>{order.name}</span> <span>{order.qty} qty</span></p>
                   </li>)}
                   <h2>Price Details</h2>
@@ -49,7 +49,7 @@ export default function Checkout(){
                     <p className='priceDetail'>Delivery Charges <span>&#x20B9;250</span></p>
                     <p className='priceDetail'>Total Amount <span>&#x20B9;{totalCartCount.totalAmount + 250}</span></p>
                     <h2>DELIVER TO</h2>
-                    <p className='deliveryAddress'> { selectedAddress ? <p>{selectedAddress.name},{selectedAddress.houseNumber},{selectedAddress.city},{selectedAddress.state},{selectedAddress.country},{selectedAddress.pincode},{selectedAddress.contactNumber}</p> : 'No shipping address added!'}</p>
+                     { selectedAddress ? <p className='deliveryAddress'>{selectedAddress.name},{selectedAddress.houseNumber},{selectedAddress.city},{selectedAddress.state},{selectedAddress.country},{selectedAddress.pincode},{selectedAddress.contactNumber}</p> : <p> 'No shipping address added!' </p>}
 
                     <button>Place Order</button>
               </div>

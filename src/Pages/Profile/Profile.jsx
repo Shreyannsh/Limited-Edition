@@ -42,10 +42,10 @@ export default function Profile(){
         <div className="profilePage">
 
                 <div className='headings'>
-                    <h1 style={{color:showProfile?'rgb(255, 207, 35)':'rgb(253, 253, 253)',padding: showProfile? '12px 95px' : '10px 70px;' }} 
+                    <h1 style={{color:showProfile?'rgb(255, 207, 35)':'rgb(253, 253, 253)',padding: showProfile? '12px 95px' : '10px 70px' }} 
                     className='one' onClick={() =>showProfileDetails()}>Profile</h1>
 
-                    <h1  style={{color:showAddress?'rgb(255, 207, 35)':'rgb(253, 253, 253)',padding: showAddress? '12px 95px' : '10px 70px;' }}  
+                    <h1  style={{color:showAddress?'rgb(255, 207, 35)':'rgb(253, 253, 253)',padding: showAddress? '12px 95px' : '10px 70px' }}  
                     className='two' onClick={()=>showAddresses()}>Address</h1>
                     
                 </div>

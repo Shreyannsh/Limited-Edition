@@ -33,7 +33,7 @@ export default function WishList(){
             <h1>My WishList ({state.wishListItems.length})</h1>
             <div className="wishListComponent">
          {  state?.wishListItems.length>0 ? state?.wishListItems.map((item) =>
-            <div >
+            <div key={item._id} >
                  <div onClick={()=>deleteItemFromWishList(item)} className='wishListItem' key={item._id} >
                  <span className='wishListAddToFav'><FaHeart style={{color:'red'}}/> </span>
                  <img src={item.image} alt=''/>

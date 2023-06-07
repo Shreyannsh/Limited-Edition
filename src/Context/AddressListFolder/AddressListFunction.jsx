@@ -29,7 +29,7 @@ export const AddressListFunction = (propps) => {
     return(
         <div className="modalParent" >
         <div className="modalChild">
-            {addressList.map((address) =><li  className="addressComponent">
+            {addressList.map((address) =><li key={address._id} className="addressComponent">
 
             <label>
             <div>
