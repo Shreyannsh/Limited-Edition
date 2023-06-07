@@ -14,7 +14,7 @@ Every range of products have bulk production and millions of copies are availabl
        
 ## Overview -:
 
-total 09 sections -
+Sections(09) -
 1.Explore
 2. Cart
 3. Wishlist
