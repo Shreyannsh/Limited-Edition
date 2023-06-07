@@ -24,6 +24,10 @@ export default function AddressProvider({children}){
 
     const [addState,dispatch] = useReducer(addressReducer,initializer);
 
+    const removeAddress =(address) =>{
+        setAddressList(addressList.filter((add) => add !== address ))
+    }
+
     const addAddress = (addressType) =>{
         if(addressType === "add") {
             setAddressList([...addressList,{...addState,_id:uuid() }]);
@@ -40,15 +44,28 @@ export default function AddressProvider({children}){
               setAddressList(newList);
         }
        
-    };
-
-    const removeAddress =(address) =>{
-        setAddressList(addressList.filter((add) => add !== address ))
     }
 
     useEffect(()=>{
-        addAddress('add');
-    },[]);
+        ( (addressType) =>{
+            if(addressType === "add") {
+                setAddressList([...addressList,{...addState,_id:uuid() }]);
+                dispatch({type:'reset'});
+            } else {
+               const id = addState._id;
+                const newList = addressList.map(address => {
+                    if (address._id === id) {
+                      return { ...address, ...addState };
+                    } else {
+                      return address;
+                    }
+                  });
+                  setAddressList(newList);
+            }
+           
+        }
+    )('add');},
+    [addState,addressList]);
     
     return(
         <div>
