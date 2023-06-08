@@ -13,9 +13,9 @@ export const AddAddress = (props) =>{
     if(!props.show){
         return null;
     }
-    
+    console.log(addState)
     const addressValues = Object.values(addState).includes('');
-  
+    console.log(addressValues)
     const addressDetails =() =>{
         if(!addressValues){
             if(props.mode==='update'){
