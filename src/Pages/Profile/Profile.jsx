@@ -4,7 +4,7 @@ import { useContext, useState} from "react";
 import { useNavigate } from "react-router-dom";
 
 import { authContext } from "../../Contexts/AuthContext";
-// import  {AddressListFunction}  from "../../Context/AddressListFolder/AddressListFunction";
+import  {AddressListFunction}  from "../../Context/AddressListFolder/AddressListFunction";
 import { wishListContext } from "../../Contexts/WishListContext";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,7 +20,7 @@ export default function Profile(){
     const [showAddress, setShowAddress] = useState(false);
     const [showProfile,setShowProfile] = useState(true);
     const {dispatch} = useContext(authContext);
-    // const [show,setShow] = useState();
+    const [show,setShow] = useState();
 
     const logout = () =>{
         clearCart();
@@ -36,14 +36,14 @@ export default function Profile(){
     const showAddresses = () =>{
         setShowProfile(false);
         setShowAddress(true);
-        // setShow(true)
+        setShow(true)
        
     }
 
     const showProfileDetails =() =>{
         setShowAddress(false);
         setShowProfile(true);
-        // setShow(false)
+        setShow(false)
     }
   
     return(
@@ -69,7 +69,7 @@ export default function Profile(){
                     </div>
                     
                     <div className='addressList'style={{display:showAddress ? 'block': 'none'}} >
-                        {/* <AddressListFunction show={show}/> */}
+                        <AddressListFunction show={show}/>
                     </div>
                 </div>
         </div>
