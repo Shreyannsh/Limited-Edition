@@ -1,7 +1,6 @@
 import "./App.css";
 //import Mockman from "mockman-js";
-import { NavLink, Routes, Route } from "react-router-dom";
-import { FaShoppingCart, FaHeart } from "react-icons/fa";
+import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Signup from "./Pages/Login/Signup/Signup";
 import Cart from "./Pages/Cart/Cart";
@@ -9,9 +8,8 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import ProductList from "./Pages/Product List/ProductList";
 import WishList from "./Pages/WishList/WishList";
-import { useContext } from "react";
-import { filterContext } from "./Contexts/FilterContext";
-import { authContext } from "./Contexts/AuthContext";
+import Header from "./Context/Header/header";
+
 import Profile from "./Pages/Profile/Profile";
 import RequiresAuth from "./Context/RequiresAuth/RequiresAuth";
 import Checkout from "./Pages/Cart/Checkout/Checkout";
@@ -19,9 +17,6 @@ import IndividualPage from "./Pages/IndividualPage/IndividualPage";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const { dispatch, state } = useContext(filterContext);
-  const { isLoggedIn } = useContext(authContext);
-
   return (
     <div className="App">
       <ToastContainer
@@ -37,32 +32,7 @@ function App() {
         theme="light"
       />
 
-      <nav className="navBar">
-        <NavLink className="nav-logo" to="/">
-          LIMITED EDITION
-        </NavLink>
-        <input
-          onChange={(e) =>
-            dispatch({ type: "productSearch", payload: e.target.value })
-          }
-          className="searchBar"
-          placeholder="Search here"
-          value={state.searchedText}
-          type="text"
-        />
-        <NavLink to="/productList" className="explore">
-          Explore
-        </NavLink>
-        <NavLink className="cart" to="/cart">
-          <FaShoppingCart /> <span>Cart</span>
-        </NavLink>
-        <NavLink className="wishList" to="/wishlist">
-          <FaHeart /> <span>Wishlist</span>
-        </NavLink>
-        <NavLink className="login" to={isLoggedIn ? "/profile" : "/login"}>
-          {isLoggedIn ? "Profile" : "Login"}
-        </NavLink>
-      </nav>
+      <Header />
 
       <Routes>
         <Route path="/" element={<Home />} />
