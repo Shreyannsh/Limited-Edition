@@ -1,53 +1,50 @@
-.profilePage{
-    margin-top:8rem;
-    display: flex;
-    align-items:center;
-    min-height: 32.1rem;
-    flex-direction: column;
-    /* width: 50rem; */
+.profilePage {
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  min-height: 92vh;
+  height: 100%;
+  flex-direction: column;
 }
 
-.headings{
-    display: flex;
-    gap: 2rem;
-
+.headings {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
-.headings .one, .two{
-    cursor: pointer;
-    background-color:  #075634;
-    color: rgb(253, 253, 253);
-    padding: 10px 70px;
-    border-radius: 10px;
+.headings .one,
+.two {
+  cursor: pointer;
+  background-color: #075634;
+  color: rgb(253, 253, 253);
+  padding: 10px 70px;
+  border-radius: 10px;
 }
 
-
-.details{
-    margin-top: 2rem;
+.profileSection {
+  display: flex;
+  margin-top: 5rem;
 }
-
-.profileSection{
-   display: flex;
-   /* text-align: left; */
-}
-.profileSection p{
-    text-align: left;
+.profileSection p {
+  text-align: left;
 }
 /* .profileSection button{
     display: flex;
     align-self: center;
 } */
 
-.profileInfo{
-    border: 1px solid;
-    box-shadow: 0px 0px 5px 0px rgb(0,0,0,0.6) ;
-    border-radius: 10px;
-    padding: 1rem 3rem;
-    margin-bottom: 1.2rem;
-    font-size: x-large;
+.profileInfo {
+  border: 1px solid;
+  box-shadow: 0px 0px 5px 0px rgb(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 1rem 3rem;
+  margin-bottom: 1.2rem;
+  font-size: x-large;
 }
 
-.profileSection button{
-    padding: 15px 20px;
-    font-size: large;
+.profileSection button {
+  padding: 15px 20px;
+  font-size: large;
 }

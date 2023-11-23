@@ -1,32 +1,42 @@
-.addressComponent{
-    border: 1px solid;
-    font-size: large;
-    padding: 0rem 2rem;
-    list-style: none;
-    position: relative;
-    margin-bottom:1rem ;
-    box-shadow: 0px 0px 5px 0px rgb(0,0,0,0.6) ;
-    border-radius: 4px;
-    
+.addressComponent {
+  border: 1px solid;
+  font-size: large;
+  padding: 0rem 2rem;
+  list-style: none;
+  position: relative;
+  margin-bottom: 2rem;
+  box-shadow: 0px 0px 5px 0px rgb(0, 0, 0, 0.6);
+  border-radius: 4px;
 }
 
- .userName{
-    font-size: x-large;
-    font-weight: 500;
+.userName {
+  font-size: x-large;
+  font-weight: 500;
 }
 
-.addressComponent p{
-    text-align: left;
-    margin-bottom: -10px;
+.addressComponent p {
+  text-align: left;
+  margin-bottom: -10px;
 }
 
-.addressComponent button{
-    margin: 2rem 2rem 1rem 2rem;
-    padding: 5px 10px;
+.addressComponent button {
+  margin: 2rem 2rem 1rem 2rem;
+  padding: 5px 10px;
 }
 
-.addressComponent input{
-    position: absolute;
-    left: 2px;
-    top: 27px
+.addressComponent input {
+  position: absolute;
+  left: 2px;
+  top: 27px;
+}
+
+.addBtn {
+  margin-top: 2rem;
+  padding: 5px 10px;
+  font-size: larger;
+}
+
+.addressBtn {
+  padding: 5px 10px;
+  font-size: 16px;
 }

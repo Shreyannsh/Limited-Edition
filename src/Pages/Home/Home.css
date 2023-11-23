@@ -1,173 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
 
-  @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
-
-
-
-
-.home{
-    padding-top: 7rem; 
-    padding-bottom: 1rem; 
-    display: flex;
-    background-color:rgb(216, 176, 31);
-   
+.home {
+  padding-top: 7rem;
+  padding-bottom: 1rem;
+  display: flex;
+  background-color: rgb(216, 176, 31);
 }
 
-.about{
-    /* display: flex;
-    flex-direction: column; */
-    /* border: 1px solid; */
-    border-radius: 10px;
-    width: 30rem;
-    margin-left: 7rem;
-    
+.about {
+  border-radius: 10px;
+  width: 30rem;
+  margin-left: 7rem;
 }
-.para-1{
-    margin-top: 3rem;
-    font-size:40px;
-    font-weight: 600;
-    /* font-family: 'Varela', sans-serif; */
-    font-family: 'Permanent Marker', cursive;
-    color:rgb(0, 0, 0);
-    background-size: cover;
-    /* background-image: url(''); */
-} 
-
-.para-1 p{
-    margin-top: -10px;
+.para-1 {
+  margin-top: 3rem;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Permanent Marker", cursive;
+  color: rgb(0, 0, 0);
+  background-size: cover;
 }
 
-.para-2{
-    box-sizing: content-box;
-    font-size:40px;
-    border: hidden;
-    background-color: black;
-    color: antiquewhite;
-    font-family: 'Abril Fatface', cursive;
-
+.para-1 p {
+  margin-top: -10px;
 }
 
-
-.para-3{
-    font-size: xx-large;
+.para-2 {
+  box-sizing: content-box;
+  font-size: 40px;
+  border: hidden;
+  background-color: black;
+  color: antiquewhite;
+  font-family: "Abril Fatface", cursive;
 }
 
-.about p{
-    padding-bottom: -40px;
+.para-3 {
+  font-size: xx-large;
 }
 
-.category{
-    padding-bottom: 2rem;
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-left: 22rem;
-    grid-column-gap: 86px;
-    grid-row-gap: 56px;
+.about p {
+  padding-bottom: -40px;
 }
 
-.category-phones{
-    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
-    color: rgb(255, 249, 249);
-    font-size: x-large;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border: hidden;
-    border-radius: 5px;
-    height: 15rem;
-    width: 15rem;
-    text-decoration: none;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('https://files.gsmchoice.com/phones/nubia-z50-ultra-starry-night/nubia-z50-ultra-starry-night-big.jpg');
+.category {
+  padding-bottom: 2rem;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 22rem;
+  grid-column-gap: 86px;
+  grid-row-gap: 56px;
 }
 
-.category-laptops{
-    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
-    color: rgb(0, 0, 0);
-    font-size: x-large;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border: hidden;
-    border-radius: 5px;
-    height: 15rem;
-    width: 15rem;
-    text-decoration: none;
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-      background-image: url('https://rukminim1.flixcart.com/image/832/832/kh9gbrk0/computer/t/e/f/msi-original-imafxb9mdy7m6zvd.jpeg?q=70');
+.common {
+  box-shadow: 0px 3px 15px 5px rgb(0, 0, 0, 0.8);
+  font-size: x-large;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border: hidden;
+  border-radius: 5px;
+  height: 15rem;
+  width: 15rem;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.category-gadgets{
-    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
-    color: rgb(0, 0, 0);
-    font-size: x-large;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border: hidden;
-    border-radius: 5px;
-    height: 15rem;
-    width: 15rem;
-    text-decoration: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('https://m.media-amazon.com/images/I/71mqeFt2qPL._SX522_.jpg');
+.common:hover {
+  box-shadow: 0px 3px 15px 10px rgb(0, 0, 0, 0.8);
+  transform: scale(1.025);
 }
-.category-earbuds{
-    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
-    color: rgb(0, 0, 0);
-    font-size: x-large;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border: hidden;
-    border-radius: 5px;
-    height: 15rem;
-    width: 15rem;
-    text-decoration: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: azure;
-      background-image: url('https://image01.oneplus.net/ebp/202012/04/1-m00-1e-00-rb8bwl_j9ewatjelaaj_14lbjxa475.png');
+
+.category-phones {
+  color: rgb(255, 249, 249);
+  background-image: url("https://files.gsmchoice.com/phones/nubia-z50-ultra-starry-night/nubia-z50-ultra-starry-night-big.jpg");
 }
-.category-watches{
-    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
-    color: rgb(255, 255, 255);
-    font-size: x-large;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border: hidden;
-    border-radius: 5px;
-    height: 15rem;
-    width: 15rem;
-    text-decoration: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('https://cdn.shopify.com/s/files/1/2309/2521/products/image_360x.jpg?v=1681470164');
+
+.category-laptops {
+  color: rgb(0, 0, 0);
+  background-image: url("https://rukminim1.flixcart.com/image/832/832/kh9gbrk0/computer/t/e/f/msi-original-imafxb9mdy7m6zvd.jpeg?q=70");
 }
-.category-all{
-    box-shadow: 0px 3px 15px 5px rgb(0, 0, 0,0.8);
-    color: rgb(255, 246, 246);
-    font-size: x-large;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border:hidden;
-    border-radius: 5px;
-    height: 15rem;
-    width: 15rem;
-    text-decoration: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwFK6bV-peJmShdBv0qIMxxe4FawqVQN2RLw&usqp=CAU');
+
+.category-gadgets {
+  color: rgb(0, 0, 0);
+  background-image: url("https://m.media-amazon.com/images/I/71mqeFt2qPL._SX522_.jpg");
+}
+.category-earbuds {
+  color: rgb(0, 0, 0);
+  background-color: azure;
+  background-image: url("https://image01.oneplus.net/ebp/202012/04/1-m00-1e-00-rb8bwl_j9ewatjelaaj_14lbjxa475.png");
+}
+.category-watches {
+  color: rgb(255, 255, 255);
+  background-image: url("https://cdn.shopify.com/s/files/1/2309/2521/products/image_360x.jpg?v=1681470164");
+}
+
+.category-all {
+  color: rgb(255, 246, 246);
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwFK6bV-peJmShdBv0qIMxxe4FawqVQN2RLw&usqp=CAU");
 }

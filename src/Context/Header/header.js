@@ -2,6 +2,9 @@ import "./header.css";
 
 import { NavLink } from "react-router-dom";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
+import { MdExplore } from "react-icons/md";
+import { IoPersonCircleSharp } from "react-icons/io5";
+
 import { useContext } from "react";
 
 import { filterContext } from "../../Contexts/FilterContext";
@@ -26,17 +29,19 @@ export default function Header() {
           value={state.searchedText}
           type="text"
         />
-        <NavLink to="/productList" className="explore">
-          Explore
+        <NavLink to="/productList" className="pageOption">
+          <MdExplore className="icon" />
+          <span>Explore</span>
         </NavLink>
-        <NavLink className="cart" to="/cart">
-          <FaShoppingCart /> <span>Cart</span>
+        <NavLink className="pageOption" to="/cart">
+          <FaShoppingCart className="icon" /> <span>Cart</span>
         </NavLink>
-        <NavLink className="wishList" to="/wishlist">
-          <FaHeart /> <span>Wishlist</span>
+        <NavLink className="pageOption" to="/wishlist">
+          <FaHeart className="icon" /> <span>Wishlist</span>
         </NavLink>
-        <NavLink className="login" to={isLoggedIn ? "/profile" : "/login"}>
-          {isLoggedIn ? "Profile" : "Login"}
+        <NavLink className="pageOption" to={isLoggedIn ? "/profile" : "/login"}>
+          <IoPersonCircleSharp className="icon" />
+          <span>{isLoggedIn ? "Profile" : "Login"}</span>
         </NavLink>
       </nav>
     </div>

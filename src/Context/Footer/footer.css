@@ -1,0 +1,21 @@
+footer {
+  /* margin-top: 3rem; */
+  display: flex;
+  align-self: flex-end;
+  /* position:fixed; */
+  padding-top: 10px;
+  width: 100%;
+  justify-content: space-around;
+  background-color: rgb(87, 83, 83);
+  color: #000000;
+  /* position: relative; */
+}
+
+footer p {
+  font-size: 15px;
+}
+
+.connect:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,10 +1,9 @@
 import "./index.css";
 import { createRoot } from "react-dom/client";
 
-
 import React from "react";
 import { makeServer } from "./server";
-import {BrowserRouter as Router} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import App from "./App";
 import UniqueProvider from "./Contexts/MainContext";
@@ -23,19 +22,18 @@ root.render(
   <React.StrictMode>
     <Router>
       <AuthProvider>
-      <AddressProvider>
-      <WishListProvider>
-      <CartProvider>
-      <UniqueProvider>
-      <FilterProvider>
-      <App />
-      </FilterProvider>
-      </UniqueProvider>
-      </CartProvider>
-      </WishListProvider>
-      </AddressProvider>
+        <UniqueProvider>
+          <AddressProvider>
+            <WishListProvider>
+              <CartProvider>
+                <FilterProvider>
+                  <App />
+                </FilterProvider>
+              </CartProvider>
+            </WishListProvider>
+          </AddressProvider>
+        </UniqueProvider>
       </AuthProvider>
     </Router>
-  </React.StrictMode>,
-  
+  </React.StrictMode>
 );
