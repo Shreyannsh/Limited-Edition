@@ -1,7 +1,6 @@
 .ProductListPage {
   display: flex;
   flex-direction: row;
-  /* color:aqua; */
   padding-top: 5rem;
   padding-bottom: 2rem;
 }

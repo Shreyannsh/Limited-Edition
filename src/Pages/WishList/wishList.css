@@ -56,7 +56,7 @@
   margin: 0.5rem 2rem;
   padding: 0.5rem 0rem;
   border-radius: 5px;
-  background-color: rgb(216, 176, 31);
+  background-color: var(--secondary-color);
   font-weight: 600;
 }
 

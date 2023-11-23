@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  background-color: rgb(138, 132, 132);
+  background-color: var(--light-gray);
   border-radius: 3px;
   font-size: 20px;
 }

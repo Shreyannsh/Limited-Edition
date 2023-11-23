@@ -17,8 +17,8 @@
 .headings .one,
 .two {
   cursor: pointer;
-  background-color: #075634;
-  color: rgb(253, 253, 253);
+  background-color: var(--primary-color);
+  color: var(--white-color);
   padding: 10px 70px;
   border-radius: 10px;
 }

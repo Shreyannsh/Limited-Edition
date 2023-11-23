@@ -4,7 +4,7 @@
   padding-top: 7rem;
   padding-bottom: 1rem;
   display: flex;
-  background-color: rgb(216, 176, 31);
+  background-color: var(--secondary-color);
 }
 
 .about {
