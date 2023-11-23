@@ -102,7 +102,6 @@ button:hover {
   flex-direction: row;
   gap: 3rem;
   flex-wrap: wrap;
-  /* justify-content:flex-start; */
   margin-left: 2rem;
   margin-top: 4rem;
 }

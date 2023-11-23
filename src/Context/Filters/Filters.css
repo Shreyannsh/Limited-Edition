@@ -1,70 +1,64 @@
-.filters{
-    margin-left: 2rem;
-    padding-right: 2rem;
-    display: flex;
-    flex-direction: column;
-    text-align:left;
-    background-color: rgb(138, 132, 132);
-    border-radius: 3px;
-    font-size: 20px;
+.filters {
+  margin-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: rgb(138, 132, 132);
+  border-radius: 3px;
+  font-size: 20px;
 }
 
-
-
-.filtersHeading{
+.filtersHeading {
   font-size: x-large;
   margin-top: -1rem;
 }
 
-.filters-price{
+.filters-price {
   margin-top: -1rem;
 }
-.filters-price input{
+.filters-price input {
   size: 2rem;
 }
 
-
-.filters-category{
-    display: flex;
-    flex-direction: column;
-    
+.filters-category {
+  display: flex;
+  flex-direction: column;
 }
-.filters-rating{
-    display: flex;
-    flex-direction: column;
+.filters-rating {
+  display: flex;
+  flex-direction: column;
 }
 
-.filters-sort{
-    display: flex;
-    flex-direction: column;
+.filters-sort {
+  display: flex;
+  flex-direction: column;
 }
 
 datalist {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-between;
-    /* writing-mode: vertical-lr; */
-    width: 200px;
-  }
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
 
-  option {
-    padding: 0px;
-  }
+option {
+  padding: 0px;
+}
 
-  input[type="range"] {
-    width: 200px;
-    margin: 0;
-  }
+input[type="range"] {
+  width: 200px;
+  margin: 0;
+}
 
-  .clear-btn{
-    font-size: 20px;
-    align-self:flex-end;
-    margin-top: -3rem;
-    margin-bottom: 4rem;
-    margin-right: -20px;
-    cursor: pointer;
-  }
+.clear-btn {
+  font-size: 20px;
+  align-self: flex-end;
+  margin-top: -3rem;
+  margin-bottom: 4rem;
+  margin-right: -20px;
+  cursor: pointer;
+}
 
-  .clear-btn:hover{
-        text-decoration: underline;
-  }
+.clear-btn:hover {
+  text-decoration: underline;
+}

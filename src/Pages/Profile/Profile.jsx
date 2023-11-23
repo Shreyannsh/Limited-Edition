@@ -2,12 +2,12 @@ import "./Profile.css";
 
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { authContext } from "../../Contexts/AuthContext";
 import { AddressListFunction } from "../../Context/AddressListFolder/AddressListFunction";
 import { wishListContext } from "../../Contexts/WishListContext";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { cartContext } from "../../Contexts/CartContext";
 
 export default function Profile() {

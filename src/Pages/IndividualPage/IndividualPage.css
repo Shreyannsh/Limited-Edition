@@ -1,113 +1,110 @@
-.parectBlock{
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    margin-bottom: 6rem;
-    margin-top: 2rem;
+.parectBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+  margin-top: 2rem;
 }
 
-.allOtherBlock{
-    padding-top: 4rem;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 2rem;
+.allOtherBlock {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
 }
-.individualProduct h3{
-    text-align: left;
-    padding-left: 10px;
+.individualProduct h3 {
+  text-align: left;
+  padding-left: 10px;
 }
-.individualProduct{
-    margin-top: 5rem;
-    box-shadow: 0px 0px 10px 1px #9aa3a0;
-    width: 50rem;
-    height: 30rem;
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    position:static;
-}
-
-.individualProduct img{
-    display: flex;
-    align-self:center;
-    width: 20rem;
-    height: 20rem;
-    border-radius: 5px;
+.individualProduct {
+  margin-top: 5rem;
+  box-shadow: 0px 0px 10px 1px #9aa3a0;
+  width: 50rem;
+  height: 30rem;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  position: static;
 }
 
-.individualProduct p{
-    text-align: left;
-    padding-left: 10px;
-    padding-top: -15px;
+.individualProduct img {
+  display: flex;
+  align-self: center;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 5px;
 }
 
-.individualProduct .brandName{
-    margin-left: 2rem;
-    margin-bottom: 2px;
-    font-size: 15px;
-    font-size: larger;
+.individualProduct p {
+  text-align: left;
+  padding-left: 10px;
+  padding-top: -15px;
 }
 
-.individualProduct .productName{
-    margin-left: 2rem;
-    font-weight: 700;
-    margin-bottom: 2px;
-    font-size: large;
-  
-}
-.individualProduct .productPrice{
-    font-weight: 600;
-    margin-left: 2rem;
-    font-size: larger;
+.individualProduct .brandName {
+  margin-left: 2rem;
+  margin-bottom: 2px;
+  font-size: 15px;
+  font-size: larger;
 }
 
-.allOtherBlock .rating{
-   
-    position: absolute;
-    font-size: 20px;
-    margin-left: 0rem;
-    margin-top: -1.5rem;
-    border-radius: 20px;
-    padding: 1px 5px;
+.individualProduct .productName {
+  margin-left: 2rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: large;
+}
+.individualProduct .productPrice {
+  font-weight: 600;
+  margin-left: 2rem;
+  font-size: larger;
 }
 
-
-.addToFavHeart{
-    padding-left: 5px;
-    margin-top: -5px;
-    font-size: xx-large;
+.allOtherBlock .rating {
+  position: absolute;
+  font-size: 20px;
+  margin-left: 0rem;
+  margin-top: -1.5rem;
+  border-radius: 20px;
+  padding: 1px 5px;
 }
 
-.wishlist-btn{
-    display: flex;
-    align-self: flex-end;
-    margin-top: -2rem;
-    margin-left: 3rem;
-    padding: 10px 10px 0px 10px;
-    margin-right: 1.5rem;
-    font-size: 20px;
-    /* border: 2px solid; */
-    font-weight: 500;
-    border-radius: 7px;
-    box-shadow: 0px 0px 2px 1px rgb(0,0,0,0.6);
-    cursor: pointer;
+.addToFavHeart {
+  padding-left: 5px;
+  margin-top: -5px;
+  font-size: xx-large;
 }
 
-.cartLink{
-    color: black;
-    text-decoration: none;
-    margin: 0rem 2rem 0rem 2rem;
-    padding: 0.7rem 2rem;
-    border-radius: 5px;
-    background-color:  rgb(216, 176, 31);
-    font-weight: 600;
-    border: 2px solid;
-    font-size: 15px;
+.wishlist-btn {
+  display: flex;
+  align-self: flex-end;
+  margin-top: -2rem;
+  margin-left: 3rem;
+  padding: 10px 10px 0px 10px;
+  margin-right: 1.5rem;
+  font-size: 20px;
+  /* border: 2px solid; */
+  font-weight: 500;
+  border-radius: 7px;
+  box-shadow: 0px 0px 2px 1px rgb(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 
-.cartLink:hover{
-    color: rgb(216, 176, 31);
-    background-color: black;
-    border:none;
+.cartLink {
+  color: black;
+  text-decoration: none;
+  margin: 0rem 2rem 0rem 2rem;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  background-color: rgb(216, 176, 31);
+  font-weight: 600;
+  border: 2px solid;
+  font-size: 15px;
+}
+
+.cartLink:hover {
+  color: rgb(216, 176, 31);
+  background-color: black;
+  border: none;
 }

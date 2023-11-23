@@ -47,28 +47,6 @@ export default function AuthProvider({ children }) {
     }
   };
 
-  // const guestLogin = async() =>{
-  //     try{
-  //         const credintials = {
-  //             email:"adarshbalika@gmail.com",
-  //             password: "adarshbalika"
-  //         };
-
-  //         const response = await axios.post('/api/auth/login',credintials);
-
-  //         const encodedToken = response.data.encodedToken;
-
-  //         localStorage.setItem('encodedToken',encodedToken);
-  //         setLogInError('');
-  //         setIsLoggedIn(true);
-  //         let from = location.state?.from?.pathname || '/';
-  //         navigate(from);
-  //     }catch(error){
-  //         ////// (error);
-  //         setLogInError(error.message);
-  //     }
-  // }
-
   const guestLogin = () => {
     dispatch({ type: "guestLogin" });
     login();

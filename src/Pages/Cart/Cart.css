@@ -12,8 +12,6 @@
   right: 0;
   left: 0;
   font-size: 2rem;
-  /* display: flex;
-    align-items: center; */
 }
 .cartItemList {
   margin-left: 15rem;
@@ -71,7 +69,6 @@
 }
 .cartButtonDecrement {
   position: absolute;
-  /* padding-right: 7px; */
   margin-left: 15rem;
   margin-top: 17.5rem;
   cursor: pointer;

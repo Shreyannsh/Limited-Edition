@@ -58,7 +58,6 @@ export default function WishList() {
                 ) : (
                   <button onClick={() => addToCart(item)}>Add to Cart</button>
                 )}
-                {/* {IsPresentInCart(item)?( <Link to='/cart'>Go to Cart</Link>) :('Add to Cart')} */}
               </div>
             </div>
           ))
