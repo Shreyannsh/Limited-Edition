@@ -89,7 +89,7 @@ export default function WishListProvider({ children }) {
 
   useEffect(() => {
     getWishList();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>

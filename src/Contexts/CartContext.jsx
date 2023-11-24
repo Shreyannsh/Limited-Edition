@@ -13,7 +13,6 @@ import { authContext } from "./AuthContext";
 export const cartContext = createContext();
 
 export default function CartProvider({ children }) {
-  const { isLoggedIn } = useContext(authContext);
   const [isLoading, setIsLoading] = useState();
 
   const cartData = async () => {
@@ -122,7 +121,7 @@ export default function CartProvider({ children }) {
 
   useEffect(() => {
     cartData();
-  }, []);
+  }, [dispatch]);
 
   const totalCartCount = state?.initialCart?.reduce(
     (acc, crr) => {

@@ -1,6 +1,6 @@
 import "./Home.css";
 
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { filterContext } from "../../Contexts/FilterContext";
@@ -9,10 +9,6 @@ import { mainContext } from "../../Contexts/MainContext";
 export default function Home() {
   const { dispatch } = useContext(filterContext);
   const { fetchData } = useContext(mainContext);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <div className="home">
