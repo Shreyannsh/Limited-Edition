@@ -1,13 +1,9 @@
 import { useContext } from "react";
-import "./Filters.css";
+import "./FiltersMain.css";
 import { filterContext } from "../../Contexts/FilterContext";
 
-export default function Filters(props) {
+export default function FiltersMain() {
   const { state, dispatch } = useContext(filterContext);
-
-  if (!props.show) {
-    return null;
-  }
 
   return (
     <div className="filters">

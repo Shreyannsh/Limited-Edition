@@ -1,21 +1,34 @@
 import "./ProductList.css";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { filterContext } from "../../Contexts/FilterContext";
 import Filters from "../../Context/Filters/Filters";
 import ItemCard from "../../Context/itemCard/ItemCard";
 import { mainContext } from "../../Contexts/MainContext";
+import FiltersMain from "../../Context/Filters main/FiltersMain";
 
 export default function ProductList() {
   const { displayProducts } = useContext(filterContext);
   const { isLoading } = useContext(mainContext);
+  const [filterOption, setFilterOption] = useState(false);
 
   const products = displayProducts();
 
   return (
     <div className="ProductListPage">
-      <div className="filters">
-        <Filters />
+      <div className="sideFilter">
+        <p
+          onClick={() => setFilterOption(!filterOption)}
+          className="filterOptionBtn"
+        >
+          Filters
+        </p>
+
+        <Filters show={filterOption} />
+      </div>
+
+      <div className="filterSection">
+        <FiltersMain />
       </div>
       <div>
         <h1>All product list</h1>

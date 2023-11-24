@@ -16,8 +16,16 @@
   position: relative;
 }
 
-.filters {
+.filterSection {
   margin-top: 2.5rem;
+  margin-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: var(--light-gray);
+  border-radius: 3px;
+  font-size: 20px;
 }
 
 .ProductListPage h1 {
@@ -32,6 +40,18 @@
   position: relative;
   top: 20%;
   left: 100%;
+}
+
+@media (max-width: 1024px) {
+  .ProductListPage .filterSection {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sideFilter {
+    display: none;
+  }
 }
 
 @media (max-width: 665px) {

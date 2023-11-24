@@ -74,8 +74,8 @@ input[type="range"] {
 }
 
 @media (min-width: 1024px) {
-  .sideFilters {
-    display: none;
+  .filters {
+    display: block;
   }
 }
 
