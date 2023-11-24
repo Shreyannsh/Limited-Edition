@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 105vh;
   height: 100%;
   margin: 10rem;
 }
@@ -34,7 +34,6 @@
 
 .TandC {
   font-size: 20px;
-  margin-left: -7rem;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -65,4 +64,10 @@
 .createNewAccount:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media (max-width: 322px) {
+  .signupPage {
+    margin: 0rem 2rem;
+  }
 }

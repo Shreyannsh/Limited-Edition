@@ -4,6 +4,8 @@
   align-items: center;
   margin-bottom: 6rem;
   margin-top: 2rem;
+  min-height: 105vh;
+  height: 100%;
 }
 
 .allOtherBlock {
@@ -12,18 +14,19 @@
   flex-direction: column;
   padding-bottom: 2rem;
 }
+
 .individualProduct h3 {
   text-align: left;
   padding-left: 10px;
 }
+
 .individualProduct {
-  margin-top: 5rem;
+  margin: 5rem 20% 5rem 20%;
   box-shadow: 0px 0px 10px 1px #9aa3a0;
-  width: 50rem;
-  height: 30rem;
+  width: fit-content;
+  height: max-content;
   border-radius: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   display: flex;
   position: static;
 }
@@ -39,6 +42,7 @@
 .individualProduct p {
   text-align: left;
   padding-left: 10px;
+  padding-right: 10px;
   padding-top: -15px;
 }
 
@@ -61,13 +65,24 @@
   font-size: larger;
 }
 
-.allOtherBlock .rating {
+.individualProduct .ratingLeft {
   position: absolute;
   font-size: 20px;
-  margin-left: 0rem;
+  margin-left: -1rem;
+  margin-top: -2.7rem;
+  border-radius: 20px;
+  padding: 2px 7px;
+  background-color: rgb(46, 131, 228);
+}
+
+.allOtherBlock .ratingRight {
+  position: absolute;
+  font-size: 20px;
+  margin-left: 1rem;
   margin-top: -1.5rem;
   border-radius: 20px;
-  padding: 1px 5px;
+  padding: 2px 5px;
+  background-color: rgb(46, 131, 228);
 }
 
 .addToFavHeart {
@@ -106,4 +121,41 @@
   color: var(--secondary-color);
   background-color: black;
   border: none;
+}
+
+@media (max-width: 569px) {
+  .individualProduct {
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 880px) {
+  .individualProduct .ratingLeft {
+    display: none;
+  }
+}
+
+@media (max-width: 880px) {
+  .individualProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .allOtherBlock .ratingRight {
+    display: none;
+  }
+
+  .allOtherBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .wishlist-btn {
+    align-self: center;
+    justify-content: center;
+    width: 90%;
+    margin-left: 1rem;
+  }
 }

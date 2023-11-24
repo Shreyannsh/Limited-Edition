@@ -7,7 +7,7 @@ import { authContext } from "../../Contexts/AuthContext";
 import { toast } from "react-toastify";
 
 export default function Login() {
-  const { state, dispatch, login, logInError } = useContext(authContext);
+  const { state, dispatch, login } = useContext(authContext);
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -71,7 +71,6 @@ export default function Login() {
           </label>{" "}
           <span> Forgot your Password? </span>
         </p>
-        <span className="loginError">{logInError}</span>
         <button className="buttonLogin" onClick={loginDetails}>
           Login
         </button>

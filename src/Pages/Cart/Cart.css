@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   position: static;
   align-items: space-around;
-  min-height: 100vh;
+  min-height: 105vh;
   height: 100%;
 }
 .cartHeading {

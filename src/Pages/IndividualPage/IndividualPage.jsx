@@ -38,18 +38,21 @@ export default function IndividualPage() {
         <div className="imageBlock">
           <img src={item.image} alt="" />
           <p className="productName">{item.name} </p>
-          {/* <p className='brandName'>{item.brand}</p> */}
           <p className="productPrice">
             {" "}
             <span>&#x20B9;</span> {item.price}
           </p>
+          <span className="ratingLeft">
+            Rating {item.rating}{" "}
+            <FaStar style={{ color: " rgb(255, 251, 0)" }} />
+          </span>
         </div>
         <div className="allOtherBlock">
           <div
             onClick={state.firstName ? () => callWishList() : () => nothing()}
             className="wishlist-btn"
           >
-            <span> Add to Wishlist </span>
+            Add to Wishlist
             <span className="addToFavHeart">
               {item.isAddToWishList ? (
                 <FaHeart style={{ color: "red" }} />
@@ -59,7 +62,7 @@ export default function IndividualPage() {
             </span>
           </div>
 
-          <span className="rating">
+          <span className="ratingRight">
             Rating {item.rating}{" "}
             <FaStar style={{ color: " rgb(255, 251, 0)" }} />
           </span>
