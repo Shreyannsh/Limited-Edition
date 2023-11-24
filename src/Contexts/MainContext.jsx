@@ -22,7 +22,7 @@ export default function UniqueProvider({ children }) {
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, []);
 
   return (
     <div>

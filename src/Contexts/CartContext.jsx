@@ -1,14 +1,7 @@
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-  useState,
-} from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 import { cartReducer } from "../Reducer/cartReducer";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { authContext } from "./AuthContext";
 
 export const cartContext = createContext();
 
