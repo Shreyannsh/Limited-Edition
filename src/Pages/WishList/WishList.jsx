@@ -25,7 +25,7 @@ export default function WishList() {
   };
 
   return (
-    <div style={{ paddingTop: "5rem" }} className="wishListPage">
+    <div className="wishListPage">
       <h1>My WishList ({state.wishListItems.length})</h1>
       <div className="wishListComponent">
         {state?.wishListItems?.length > 0 ? (

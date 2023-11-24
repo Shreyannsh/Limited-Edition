@@ -18,7 +18,7 @@ export default function ProductList() {
         <Filters />
       </div>
       <div>
-        <h1>Showing all products</h1>
+        <h1>All product list</h1>
         {isLoading && (
           <div className="loadingImage">
             <img

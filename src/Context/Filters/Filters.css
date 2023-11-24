@@ -62,3 +62,36 @@ input[type="range"] {
 .clear-btn:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 789px) {
+  .filters {
+    margin-left: 0rem;
+    padding-left: 0.5rem;
+    padding-right: 0rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--light-gray);
+    border-radius: 3px;
+    font-size: 20px;
+  }
+
+  .clear-btn {
+    font-size: 20px;
+    align-self: flex-end;
+    margin-top: -3.1rem;
+    margin-bottom: 4rem;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  #price {
+    width: 80%;
+  }
+
+  #values {
+    display: flex;
+    justify-content: space-around;
+    margin-left: -2rem;
+  }
+}

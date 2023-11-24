@@ -1,5 +1,5 @@
 .wishListPage {
-  padding-top: 15rem;
+  padding-top: 5rem;
   min-height: 100vh;
   height: 100%;
   display: flex;
@@ -7,10 +7,6 @@
   flex-wrap: wrap;
 }
 
-.wishListItemList {
-  margin-left: 15rem;
-  padding-bottom: 2rem;
-}
 .wishListItem {
   box-shadow: 0px 0px 10px 1px #9aa3a0;
   width: 17rem;
@@ -130,4 +126,13 @@ button:hover {
   color: rgb(216, 176, 31);
   background-color: black;
   border: none;
+}
+
+@media (max-width: 569px) {
+  .wishListPage {
+    padding-top: 7rem;
+  }
+  .wishListComponent {
+    justify-content: center;
+  }
 }

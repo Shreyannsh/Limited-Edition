@@ -1,6 +1,11 @@
+.cartFullPage {
+  padding-top: 5rem;
+}
+
 .cartPage {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
   position: static;
   align-items: space-around;
@@ -14,7 +19,9 @@
   font-size: 2rem;
 }
 .cartItemList {
-  margin-left: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 7rem;
   padding-bottom: 2rem;
 }
@@ -164,7 +171,81 @@
 }
 
 .emptyCart {
-  margin-top: 7rem;
-  margin-right: 20rem;
+  margin-top: -7rem;
   font-size: 4rem;
+}
+
+@media (max-width: 876px) {
+  .priceDetails {
+    padding: 0px 15px;
+    padding-bottom: 1rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    right: 5rem;
+    top: 12rem;
+    background-color: var(--light-gray);
+    width: fit-content;
+    border-radius: 5px;
+  }
+
+  .priceDetails span {
+    margin-left: 5rem;
+  }
+
+  .cartPage {
+    justify-content: start;
+    margin-left: 4rem;
+  }
+}
+
+@media (max-width: 585px) {
+  .cartHeading {
+    position: relative;
+    margin-bottom: -4rem;
+  }
+
+  .cartFullPage {
+    padding-top: 7rem;
+  }
+
+  .cartPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0rem; /*needed */
+    padding-top: 0rem;
+  }
+
+  .priceDetails {
+    padding: 0px 15px;
+    position: relative; /*property changed */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    right: 0rem;
+    top: 0rem;
+    background-color: var(--light-gray);
+    height: auto;
+    width: fit-content;
+    border-radius: 5px;
+    padding-bottom: 1rem; /*property added */
+    margin-bottom: 2rem; /*property added */
+  }
+  .priceDetails span {
+    margin-left: 5rem;
+  }
+  .emptyCart {
+    margin-top: 2rem; /*property changed */
+    margin-right: 0rem; /*property changed */
+    font-size: 4rem;
+  }
+  .cartItemList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 7rem; /*property changed */
+    padding-bottom: 2rem;
+  }
 }

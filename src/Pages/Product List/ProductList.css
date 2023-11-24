@@ -33,3 +33,30 @@
   top: 20%;
   left: 100%;
 }
+
+@media (max-width: 665px) {
+  .allProducts {
+    margin-left: 0rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+  .ProductListPage {
+    padding-top: 7rem;
+  }
+  .ProductListPage h1 {
+    font-size: 2rem;
+  }
+  .filters {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 444px) {
+  .filters {
+    margin-right: 1.5rem;
+  }
+
+  .allProducts {
+    margin-right: 2rem;
+  }
+}

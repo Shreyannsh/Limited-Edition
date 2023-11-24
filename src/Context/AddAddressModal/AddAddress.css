@@ -18,11 +18,13 @@
 }
 
 .address {
-  width: 550px;
-  height: 620px;
+  width: fit-content;
+  height: fit-content;
   border-radius: 15px;
   background-color: var(--white-color);
   padding: 0px 20px;
+  padding-bottom: 1rem;
+  margin: 0rem 1rem;
 }
 
 fieldset {

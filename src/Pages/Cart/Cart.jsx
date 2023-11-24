@@ -21,7 +21,7 @@ export default function Cart() {
   } = useContext(cartContext);
 
   return (
-    <div style={{ display: "flex", paddingTop: "5rem" }}>
+    <div className="cartFullPage">
       <h1 className="cartHeading">
         My Cart ({totalCartCount?.quantity ? totalCartCount?.quantity : 0})
       </h1>
@@ -82,42 +82,44 @@ export default function Cart() {
             <h1 className="emptyCart">Cart is Empty!</h1>
           )}
         </div>
-        <div className="priceDetails">
-          <h2>PRICE DETAILS</h2>
-          <p>
-            Price({totalCartCount?.quantity}){" "}
-            <span>&#x20B9;{totalCartCount?.totalAmount}</span>
-          </p>
-          <p>
-            Discount: <span>&#x20B9;0</span>
-          </p>
-          <p>
-            Delivery Charges{" "}
-            <span>&#x20B9;{state.initialCart.length > 0 ? 250 : "0"}</span>
-          </p>
-          <p style={{ fontSize: "20px" }}>
-            <b>Total Amount </b>{" "}
-            <b>
-              <span>
-                &#x20B9;
-                {state.initialCart.length
-                  ? totalCartCount?.totalAmount + 250
-                  : 0}
-              </span>{" "}
-            </b>{" "}
-          </p>
-          {state?.initialCart?.length > 0 ? (
-            <NavLink
-              className="checkoutLink"
-              to={state?.initialCart.length > 0 ? "/checkout" : "/barrier"}
-            >
-              Checkout
-            </NavLink>
-          ) : (
-            <NavLink className="checkoutLink" onClick={() => restriction()}>
-              Checkout
-            </NavLink>
-          )}
+        <div>
+          <div className="priceDetails">
+            <h2>PRICE DETAILS</h2>
+            <p>
+              Price({totalCartCount?.quantity}){" "}
+              <span>&#x20B9;{totalCartCount?.totalAmount}</span>
+            </p>
+            <p>
+              Discount: <span>&#x20B9;0</span>
+            </p>
+            <p>
+              Delivery Charges{" "}
+              <span>&#x20B9;{state.initialCart.length > 0 ? 250 : "0"}</span>
+            </p>
+            <p style={{ fontSize: "20px" }}>
+              <b>Total Amount </b>{" "}
+              <b>
+                <span>
+                  &#x20B9;
+                  {state.initialCart.length
+                    ? totalCartCount?.totalAmount + 250
+                    : 0}
+                </span>{" "}
+              </b>{" "}
+            </p>
+            {state?.initialCart?.length > 0 ? (
+              <NavLink
+                className="checkoutLink"
+                to={state?.initialCart.length > 0 ? "/checkout" : "/barrier"}
+              >
+                Checkout
+              </NavLink>
+            ) : (
+              <NavLink className="checkoutLink" onClick={() => restriction()}>
+                Checkout
+              </NavLink>
+            )}
+          </div>
         </div>
       </div>
     </div>

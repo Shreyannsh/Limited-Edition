@@ -32,6 +32,8 @@
 .brandName {
   font-weight: 700;
   margin-bottom: 2px;
+  width: 6rem;
+  word-wrap: break-word;
 }
 
 .productName {
@@ -87,4 +89,35 @@
   font-size: 1.5rem;
   margin-left: 15rem;
   cursor: pointer;
+}
+
+@media (max-width: 665px) {
+  .item {
+    width: 13rem;
+    height: 100%;
+  }
+
+  .item img {
+    width: 8rem;
+  }
+
+  .brandName {
+    margin-left: 0.5rem;
+  }
+
+  .productName {
+    margin-left: 0.5rem;
+  }
+  .productPrice {
+    margin-left: 0.5rem;
+  }
+
+  .rating {
+    margin-left: 8rem;
+    margin-top: 12.8rem;
+  }
+
+  .addToFav {
+    margin-left: 11rem;
+  }
 }
