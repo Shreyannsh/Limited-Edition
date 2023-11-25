@@ -10,10 +10,13 @@
 .addresses {
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
   padding-left: 10px;
+  padding-bottom: 20px;
   text-align: left;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   border-radius: 5px;
+  width: 70%;
 }
 
 .change-btn {
@@ -26,6 +29,7 @@
 
 .addressList {
   margin-top: 2rem;
+  width: 70%;
 }
 
 .orderDetails {
