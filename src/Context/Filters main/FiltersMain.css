@@ -1,5 +1,5 @@
-.filters {
-  margin-left: 2rem;
+.filtersMain {
+  margin-left: 0.5rem;
   padding: 2rem 2rem 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -61,53 +61,4 @@ input[type="range"] {
 
 .clear-btn:hover {
   text-decoration: underline;
-}
-
-@media (max-width: 1024px) {
-  .filters {
-    position: absolute;
-    z-index: 99;
-    opacity: 0.9;
-    margin-top: 4.5rem;
-    border-radius: 5px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .filters {
-    display: block;
-  }
-}
-
-@media (max-width: 789px) {
-  .filters {
-    margin-left: 0rem;
-    padding-left: 0.5rem;
-    padding-right: 0rem;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    background-color: var(--light-gray);
-    border-radius: 3px;
-    font-size: 20px;
-  }
-
-  .clear-btn {
-    font-size: 20px;
-    align-self: flex-end;
-    margin-top: -3.1rem;
-    margin-bottom: 4rem;
-    margin-right: 20px;
-    cursor: pointer;
-  }
-
-  #price {
-    width: 80%;
-  }
-
-  #values {
-    display: flex;
-    justify-content: space-around;
-    margin-left: -2rem;
-  }
 }

@@ -1,11 +1,11 @@
 .filters {
-  margin-left: 2rem;
+  margin-top: 9.3rem;
   padding: 2rem 2rem 2rem 1rem;
   display: flex;
   flex-direction: column;
   text-align: left;
   background-color: var(--light-gray);
-  border-radius: 3px;
+  border-radius: 0px 10px 10px 0px;
   font-size: 20px;
 }
 
@@ -63,33 +63,19 @@ input[type="range"] {
   text-decoration: underline;
 }
 
-@media (max-width: 1024px) {
-  .filters {
-    position: absolute;
-    z-index: 99;
-    opacity: 0.9;
-    margin-top: 4.5rem;
-    border-radius: 5px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .sideFilters {
-    display: none;
-  }
-}
-
 @media (max-width: 789px) {
   .filters {
-    margin-left: 0rem;
-    padding-left: 0.5rem;
-    padding-right: 0rem;
+    opacity: 0.9;
+    position: absolute;
+    margin-top: 7.3rem;
+    padding: 2rem 2rem 2rem 1rem;
     display: flex;
     flex-direction: column;
     text-align: left;
     background-color: var(--light-gray);
-    border-radius: 3px;
+    border-radius: 0px 10px 10px 0px;
     font-size: 20px;
+    z-index: 1;
   }
 
   .clear-btn {

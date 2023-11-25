@@ -18,14 +18,26 @@
 
 .filterSection {
   margin-top: 2.5rem;
-  margin-left: 2rem;
-  padding-right: 2rem;
+  padding-right: 0.5rem;
   display: flex;
   flex-direction: column;
+  align-items: start;
   text-align: left;
   background-color: var(--light-gray);
   border-radius: 3px;
   font-size: 20px;
+}
+
+.filterOptionBtn {
+  position: absolute;
+  top: 6rem;
+  left: 3rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.filterOptionBtn:hover {
+  text-decoration: underline;
 }
 
 .ProductListPage h1 {
@@ -46,6 +58,11 @@
   .ProductListPage .filterSection {
     display: none;
   }
+
+  .allProducts {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -54,7 +71,7 @@
   }
 }
 
-@media (max-width: 665px) {
+@media (max-width: 688px) {
   .allProducts {
     margin-left: 0rem;
     margin-bottom: 2rem;
@@ -69,14 +86,21 @@
   .filters {
     margin-top: 1.5rem;
   }
+
+  .filterOptionBtn {
+    margin-top: 3rem;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+  }
 }
 
-@media (max-width: 444px) {
-  .filters {
-    margin-right: 1.5rem;
-  }
-
-  .allProducts {
-    margin-right: 2rem;
+@media (max-width: 377px) {
+  .filterOptionBtn {
+    position: absolute;
+    top: 8.5rem;
+    left: 0;
+    right: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
   }
 }

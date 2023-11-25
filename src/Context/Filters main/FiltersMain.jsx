@@ -6,7 +6,7 @@ export default function FiltersMain() {
   const { state, dispatch } = useContext(filterContext);
 
   return (
-    <div className="filters">
+    <div className="filtersMain">
       <h3 className="filtersHeading">Filters</h3>
 
       <span
