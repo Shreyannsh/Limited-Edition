@@ -1,7 +1,7 @@
 .item {
   box-shadow: 0px 0px 10px 1px #9aa3a0;
   width: 17rem;
-  height: 22rem;
+  height: auto;
   border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -32,7 +32,7 @@
 .brandName {
   font-weight: 700;
   margin-bottom: 2px;
-  width: 6rem;
+  width: 8rem;
   word-wrap: break-word;
 }
 
