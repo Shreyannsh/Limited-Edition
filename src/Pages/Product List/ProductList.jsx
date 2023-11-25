@@ -30,7 +30,7 @@ export default function ProductList() {
       <div className="filterSection">
         <FiltersMain />
       </div>
-      <div>
+      <div className="rightSetion">
         <h1>All product list</h1>
         {isLoading && (
           <div className="loadingImage">
@@ -41,11 +41,17 @@ export default function ProductList() {
           </div>
         )}
         <div className="allProducts">
-          {products.map((item) => (
-            <li key={item._id} className="oneByOne">
-              <ItemCard item={item} />
-            </li>
-          ))}
+          {products.length <= 0 ? (
+            <div className="notFoundMsg">
+              <p>No item found!</p>
+            </div>
+          ) : (
+            products.map((item) => (
+              <li key={item._id} className="oneByOne">
+                <ItemCard item={item} />
+              </li>
+            ))
+          )}
         </div>
       </div>
     </div>

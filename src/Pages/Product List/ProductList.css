@@ -3,13 +3,24 @@
   flex-direction: row;
   padding-top: 5rem;
   padding-bottom: 2rem;
+  text-align: center;
+}
+
+.rightSetion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .allProducts {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: center;
   margin-top: 4rem;
-  margin-left: 5rem;
+  margin-left: 0rem;
   column-gap: 36px;
   row-gap: 36px;
   flex-wrap: wrap;
@@ -51,6 +62,15 @@
   position: relative;
   top: 20%;
   left: 100%;
+}
+
+.notFoundMsg {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  height: 67vh;
+  z-index: -1;
 }
 
 @media (max-width: 1024px) {

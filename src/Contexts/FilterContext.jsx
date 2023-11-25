@@ -41,8 +41,8 @@ export default function FilterProvider({ children }) {
     if (state.searchedText.length > 0) {
       products = products.filter(
         (item) =>
-          item.name.toLowerCase().includes(state.searchedText) ||
-          item.brand.toLowerCase().includes(state.searchedText)
+          item.name.toLowerCase().includes(state.searchedText.toLowerCase()) ||
+          item.brand.toLowerCase().includes(state.searchedText.toLowerCase())
       );
     }
 
