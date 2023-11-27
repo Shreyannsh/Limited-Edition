@@ -19,7 +19,7 @@ export default function Home() {
             <span
               style={{
                 backgroundColor: "black",
-                padding: "0px 5px",
+                padding: "0px 25px",
                 color: "antiquewhite",
                 fontSize: "3rem",
               }}
@@ -53,7 +53,7 @@ export default function Home() {
         <Link
           to="/productList"
           onClick={() =>
-            dispatch({ type: "setSingleCategory", payload: "laptops" })
+            dispatch({ type: "setSingleCategory", payload: "laptop" })
           }
           className="common category-laptops"
         >

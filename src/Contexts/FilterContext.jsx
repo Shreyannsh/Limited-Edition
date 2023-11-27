@@ -48,7 +48,7 @@ export default function FilterProvider({ children }) {
 
     if (state.price > 500) {
       products = products.filter(
-        (item) => Number(item.price) >= Number(state.price)
+        (item) => Number(item.price) <= Number(state.price)
       );
     }
 

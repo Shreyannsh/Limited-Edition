@@ -1,8 +1,11 @@
 .ProductListPage {
   display: flex;
+  justify-content: flex-start;
   flex-direction: row;
   padding-top: 5rem;
   padding-bottom: 2rem;
+  min-height: 105vh;
+  height: 100%;
   text-align: center;
 }
 
@@ -19,7 +22,7 @@
   flex-direction: row;
   width: 100%;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 8rem;
   margin-left: 0rem;
   column-gap: 36px;
   row-gap: 36px;
@@ -52,6 +55,8 @@
 
 .ProductListPage h1 {
   font-size: 3rem;
+  position: absolute;
+  top: 4.5rem;
 }
 
 .oneByOne {
@@ -59,9 +64,11 @@
 }
 
 .loadingImage {
-  position: relative;
-  top: 20%;
-  left: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
 }
 
 .notFoundMsg {
@@ -101,13 +108,14 @@
   }
   .ProductListPage h1 {
     font-size: 2rem;
+    top: 6.5rem;
   }
   .filters {
     margin-top: 1.5rem;
   }
 
   .filterOptionBtn {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     margin-right: 2rem;
     font-size: 1.2rem;
   }

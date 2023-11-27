@@ -41,7 +41,7 @@ export default function ProductList() {
           </div>
         )}
         <div className="allProducts">
-          {products.length <= 0 ? (
+          {products.length <= 0 && isLoading === false ? (
             <div className="notFoundMsg">
               <p>No item found!</p>
             </div>

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { MdExplore } from "react-icons/md";
 import { IoPersonCircleSharp } from "react-icons/io5";
-
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 
 import { filterContext } from "../../Contexts/FilterContext";
@@ -14,6 +14,16 @@ export default function Header() {
   const { dispatch, state } = useContext(filterContext);
   const { isLoggedIn } = useContext(authContext);
 
+  const navigate = useNavigate();
+
+  const productSearch = (e) => {
+    if (window.location.pathname !== "/productList") {
+      navigate("/productList");
+    }
+
+    dispatch({ type: "productSearch", payload: e.target.value });
+  };
+
   return (
     <div>
       <nav className="navBar">
@@ -21,10 +31,8 @@ export default function Header() {
           LIMITED EDITION
         </NavLink>
         <input
-          onChange={(e) =>
-            dispatch({ type: "productSearch", payload: e.target.value })
-          }
-          className="searchBar"
+          onChange={(e) => productSearch(e)}
+          className={"searchBar"}
           placeholder="Search here"
           value={state.searchedText}
           type="text"

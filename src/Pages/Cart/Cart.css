@@ -175,11 +175,15 @@
 }
 
 .emptyCart {
-  margin-top: -7rem;
+  margin-top: 8rem;
   font-size: 4rem;
 }
 
 @media (max-width: 995px) {
+  .cartItemList {
+    margin-top: 7rem;
+  }
+
   .priceDetails {
     padding: 0px 15px;
     padding-bottom: 1rem;

@@ -42,7 +42,11 @@ export const filterReducer = (state, action) => {
     case "setSingleCategory": {
       return {
         ...state,
-        checkBoxValues: [...state.checkBoxValues, action.payload],
+        price: "500",
+        searchedText: "",
+        rating: "",
+        sort: "",
+        checkBoxValues: [action.payload],
       };
     }
 
