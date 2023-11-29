@@ -35,6 +35,8 @@ Features-
 3. Real time Login and SignUp
 4. Mock Backend used and fetched data from backend API call
 
+# responsive for different devices
+
 ## E-Commerce Backend
 This folder contains the Mock Backend created for E-Commerce App. It contains different API end-points and database configuration for building E-Commerce; so that you can focus on building Frontend.
 
