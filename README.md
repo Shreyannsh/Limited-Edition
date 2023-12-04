@@ -1,5 +1,5 @@
 ## Description
-Every range of products have bulk production and millions of copies are available to millions of customers but companies also launch there handful range of products with unique IDENTITY, FEATURES and TEACHNOLOGY called LIMITED EDITION. Here on https://limitededition.netlify.app, we have feature such limited edition products from few product range which are Phones, Laptops, Earbuds,Watches and Gadgets.
+Every range of products have bulk production and millions of copies are available to millions of customers but companies also launch there handful range of products with unique IDENTITY, FEATURES and TEACHNOLOGY called LIMITED EDITION. Here on https://limitededition.netlify.app, we have featured such limited edition products from few product range which are Phones, Laptops, Earbuds,Watches and Gadgets.
 
 ![home page](https://github.com/Shreyannsh/Limited-Edition/assets/111145568/c8d20fe1-8e4c-461b-8ab2-bfd3c198339f)
 
